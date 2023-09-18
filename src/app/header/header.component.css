@@ -1,0 +1,43 @@
+.Header-F{
+    background-color: rgb(30, 30, 30);
+    color: rgb(119, 225, 217); 
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+    padding-left:0.5rem;
+    justify-content: space-between;
+}
+#Logo img{
+    padding-top: 0.5rem;
+    width:30%;
+}
+.menu{
+    margin-left: 10%;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    gap: 20px;
+}
+a{
+    color: #FFF;
+    font-family: 'Courier';
+    font-style: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+#home.active{
+    color:#a46363;
+}
+#skills.active{
+    color:#A6A001;
+}
+#certifications.active{
+    color:#63c2a1;
+}
+#projects.active{
+    color:#518aad;
+}
+#contact.active{
+    color:#7d6ea4;
+}
