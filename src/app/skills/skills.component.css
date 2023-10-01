@@ -1,0 +1,36 @@
+.main{
+    background-color: #101113;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    padding-top:8%;
+    padding-left:2%;
+}
+.main3 img{
+    width: 45%;
+    height: auto;    
+}
+#Frontend, #Backend, #Database, #Others{
+    width:250px;
+    height:300px;
+    border-radius: 0.8rem;
+    border: 1px solid #bdafe0;
+    background: #1E1E1E;
+    color: #bdafe0;
+    font-family:'Times New Roman';
+    font-style: italic;
+    font-weight: bold;
+    font-size:larger;
+    margin-right: 3rem;
+    padding-left: 1rem;
+    margin-bottom: 2.4rem;
+}
+#Frontend img, #Database img, #Backend img, #Others img{
+    width: 25%;
+    height: 23%;
+    padding-top: 1rem;
+}
+#align-text{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color:#7D6EA4;;
+}

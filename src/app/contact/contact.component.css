@@ -1,0 +1,19 @@
+.main{
+    background-color: #1E1E1E;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 1rem;
+}
+#col1 img{
+    width:55%;
+    height:65%;
+    
+}
+#col2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+#left img{
+    width:20%;
+    height:50%; 
+}

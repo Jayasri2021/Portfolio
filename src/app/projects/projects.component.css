@@ -1,0 +1,11 @@
+.top-right{
+    background-color: #101113;
+    padding-left:2%;
+    padding-top: 2%;
+}
+.top-right img{
+    display: block;
+    margin-right: auto;
+    width: 55%;
+}
+/* color: #6B9999 */

@@ -1,0 +1,28 @@
+#top{ 
+    background-color: #101113;
+    padding-top: 3%;
+    width: auto;
+    height: auto;
+}
+#top img{
+    width: 37%;
+    height: 32%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main{
+    background-color: #101113;
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#col1 img, #col2 img{
+    width:89%;
+    height:18.5%;
+    padding: 1%;
+}

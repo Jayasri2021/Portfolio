@@ -1,0 +1,33 @@
+.main{
+    background-color: #101113;
+    width: auto;
+    height: auto;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#Image img{
+    height: 60%;
+    width: 60%;
+    margin-left:20%;
+    margin-top: 10%;
+}
+.main1{
+    color: #ffffff;
+    font-family: "fantasy";
+    font-style: italic;
+    font-size: 150%;
+    text-align: right;
+    padding-top: 20%;
+    width: auto;
+    margin-right:20%;
+}
+#Jayasri,#Developer {
+    color:#ffffff;
+    font-family: "ABeeZee";
+    font-style: italic;
+    font-size: 200%;
+    text-transform: uppercase;
+}
+#color {
+    color:#7D6EA4;
+}
