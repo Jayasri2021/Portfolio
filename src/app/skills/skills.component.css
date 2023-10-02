@@ -10,8 +10,8 @@
     height: auto;    
 }
 #Frontend, #Backend, #Database, #Others{
-    width:250px;
-    height:300px;
+    width:15.625rem;
+    height:18.75rem;
     border-radius: 0.8rem;
     border: 1px solid #bdafe0;
     background: #1E1E1E;

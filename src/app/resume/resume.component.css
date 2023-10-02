@@ -6,8 +6,8 @@
     padding-top:2%;
 }
 .top img{
-    width: 20%;
-    height: 19%;
+    width: 18%;
+    height: auto;
     display: block;
     margin-right:auto;
     margin-left:auto;
@@ -28,5 +28,4 @@
 .main a{
     text-decoration: none;
     color:#bdafe0;
-    target: "_blank";
 }

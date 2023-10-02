@@ -1,11 +1,36 @@
-.top-right{
+.main{
+    background-color: #101113;
+    width: auto;
+    height: auto;
+}
+#top-left{
     background-color: #101113;
     padding-left:2%;
     padding-top: 2%;
 }
-.top-right img{
+#top-left img{
     display: block;
     margin-right: auto;
-    width: 55%;
+    width: 50%;
+    height: auto;
 }
-/* color: #6B9999 */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.content {
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* color: #bdafe0 */

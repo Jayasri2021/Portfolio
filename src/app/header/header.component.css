@@ -1,6 +1,5 @@
 .Header-F{
     background-color: rgb(30, 30, 30);
-    color:#63c2a1;
     display: flex;
     width: auto;
     height: auto;
@@ -26,21 +25,6 @@ a{
     text-decoration: none;
     font-size: 120%;
 }
-#home.active{
-    color:#7D6EA4;
-}
-#skills.active{
-    color:#7D6EA4;
-}
-#certifications.active{
-    color:#7D6EA4;
-}
-#projects.active{
-    color:#7D6EA4;
-}
-#contact.active{
-    color:#7D6EA4;
-}
-#resume.active{
-    color:#7D6EA4;
+#home.active, #shills.active, #certification.active, #projects.active, #contacts.active, #resume.active{
+    color:#bdafe0;
 }
