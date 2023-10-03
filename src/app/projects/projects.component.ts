@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
-  totalProjects = 50;  // Total projects in your dataset
-  projectsPerPage = 10;  // Projects to display per page
+  totalProjects = 3;  // Total projects in your dataset
+  projectsPerPage = 1;  // Projects to display per page
   currentPage = 1;
   totalPages: number = 0; // Initialize to a default value
   pagedProjects: string[] = []; // 
