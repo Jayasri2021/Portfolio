@@ -4,7 +4,7 @@
   </div>
   <div class="pagination">
     <button (click)="prevPage()" [disabled]="currentPage === 1"><</button>
-    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <!-- <span>{{ currentPage }} / {{ totalPages }}</span> -->
     <button (click)="nextPage()" [disabled]="currentPage === totalPages">
       >
     </button>
@@ -13,6 +13,7 @@
   <div class="content">
     <ul>
       <li *ngFor="let project of pagedProjects">{{ project }}</li>
+      <span>{{ currentPage }} / {{ totalPages }}</span>
     </ul>
   </div>
 </div>

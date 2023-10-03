@@ -21,8 +21,6 @@ export class ProjectsComponent {
     this.totalPages = Math.ceil(this.totalProjects / this.projectsPerPage);
   }
   loadPage(page: number): void {
-    // Replace with your data loading logic based on the page number
-    // Example: Load data from a service using an HTTP request
     this.pagedProjects = [];  // Replace with your actual data
     for (let i = (page - 1) * this.projectsPerPage; i < page * this.projectsPerPage; i++) {
       if (i < this.totalProjects) {
