@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { OwlCarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -25,8 +25,7 @@ import { CommonModule } from '@angular/common';
     ResumeComponent
   ],
   imports: [
-    CommonModule,
-    CarouselModule.forRoot(),
+    OwlCarouselModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
