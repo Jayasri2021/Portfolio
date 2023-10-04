@@ -1,23 +1,9 @@
-<div>
-  <carousel>
-    <slide>
-      <img
-        src="https://via.placeholder.com/800x400?text=Project+1"
-        alt="Project 1"
-      />
-    </slide>
-    <slide>
-      <img
-        src="https://via.placeholder.com/800x400?text=Project+2"
-        alt="Project 2"
-      />
-    </slide>
-    <slide>
-      <img
-        src="https://via.placeholder.com/800x400?text=Project+3"
-        alt="Project 3"
-      />
-    </slide>
-  </carousel>
-</div>
-<app-contact></app-contact>
+<owl-carousel-o [options]="customOptions">
+  <ng-container *ngFor="let project of projects">
+    <div class="item">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description }}</p>
+      <img [src]="project.image" alt="{{ project.name }}" />
+    </div>
+  </ng-container>
+</owl-carousel-o>
