@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { OwlCarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -11,7 +10,6 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -25,7 +23,6 @@ import { CommonModule } from '@angular/common';
     ResumeComponent
   ],
   imports: [
-    OwlCarouselModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule

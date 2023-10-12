@@ -1,36 +1,80 @@
+.Logo-skills{
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #101113; 
+}
+.Logo-skills img{
+    width: 16%;
+    height: auto;
+  width: 27vw; 
+}
 .main{
     background-color: #101113;
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    padding-top:8%;
-    padding-left:2%;
+    display: flex;
+    /* grid-template-columns:repeat(2 , 1fr); */
+    gap: 12%;
+    padding: 2rem;  
+    place-items: center;
 }
-.main3 img{
-    width: 45%;
-    height: auto;    
+.card1, .card2, .card3, .card4{
+    width: 18vw;
+    height: 40vh;
+    border: 2px solid transparent;
+    border-radius: 2rem; 
+    box-shadow: 0 0 3rem rgba(169, 94, 209, 0.5);
+    animation: glowing 0.8s infinite alternate;
+    background-color: rgb(30, 30, 30);
+    perspective: 150rem;
 }
-#Frontend, #Backend, #Database, #Others{
-    width:15.625rem;
-    height:18.75rem;
-    border-radius: 0.8rem;
-    border: 1px solid #bdafe0;
-    background: #1E1E1E;
-    color: #bdafe0;
-    font-family:'Times New Roman';
-    font-style: italic;
-    font-weight: bold;
-    font-size:larger;
-    margin-right: 3rem;
-    padding-left: 1rem;
-    margin-bottom: 2.4rem;
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position:relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
-#Frontend img, #Database img, #Backend img, #Others img{
-    width: 25%;
-    height: 23%;
-    padding-top: 1rem;
+.card1:hover .card-inner, .card2:hover .card-inner, .card3:hover .card-inner, .card4:hover .card-inner{
+    transform: rotateY(180deg);
 }
-#align-text{
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    color:#7D6EA4;;
+#card-front, #card-back{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
+#card-front{
+    color: #876ab1;
+    transform: rotateY(0deg);
+    display: flex;
+    gap:5%;
+    justify-content: center;
+    align-items: center;
+}
+#card-back{
+    transform: rotateY(180deg);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#card-front img{
+    width: 22%;
+    height: 18%;
+}
+#align-text img{
+    width:40%;
+    height:50%; 
+    padding: 5%;
+}
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 1.5rem rgba(67, 28, 88, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 1.5rem rgba(229, 181, 255, 0.5);
+    }
+  }

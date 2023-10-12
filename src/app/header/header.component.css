@@ -1,29 +1,34 @@
 .Header-F{
     background-color: rgb(30, 30, 30);
+    position:fixed;
     display: flex;
-    width: auto;
+    width: 100%;
     height: auto;
     flex-shrink: 0;
     padding-left:0.5rem;
     justify-content: space-between;
+    z-index: 5;
 }
 #Logo img{
-    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.3rem;
     width:25%;
 }
 .menu{
     margin-left: 10%;
-    padding: 2rem;
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     gap: 20px;
 }
-a{
+.menu p{
     color: #FFF;
     font-family: 'Courier';
     font-style: normal;
     line-height: normal;
     text-decoration: none;
-    font-size: 120%;
+    font-size: 110%;
 }
 #home.active, #shills.active, #certification.active, #projects.active, #contacts.active, #resume.active{
     color:#bdafe0;

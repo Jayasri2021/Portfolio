@@ -18,13 +18,13 @@
 #col2 img{
     width: 6%;
     height:auto; 
-    padding-bottom: 1%;
+    /* padding-bottom: 1%; */
 }
 #col2 p{
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 20px; 
+    gap:5%; 
 }
 #col2 a, #col3 a{
     text-decoration: none;
@@ -39,7 +39,6 @@
 }
 #col3 p{
     font-size: medium;
-    padding-bottom: 1%;
     font-family: 'Times New Roman';
 }
 #copy{
@@ -47,6 +46,7 @@
     width: auto;
     height: auto;
     color:#bdafe0;
+    font-size: 80%;
     text-align: center;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
