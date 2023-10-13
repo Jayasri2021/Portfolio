@@ -6,20 +6,20 @@
     background-color: #101113; 
 }
 .Logo-skills img{
-    width: 16%;
     height: auto;
-  width: 27vw; 
+    width: 17vw; 
 }
 .main{
+    padding: 5%;
+    width:auto;
+    height:auto;
     background-color: #101113;
-    display: flex;
-    /* grid-template-columns:repeat(2 , 1fr); */
-    gap: 12%;
-    padding: 2rem;  
-    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10%;
 }
-.card1, .card2, .card3, .card4{
-    width: 18vw;
+.card{
+    width: 17vw;
     height: 40vh;
     border: 2px solid transparent;
     border-radius: 2rem; 
@@ -36,7 +36,7 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-.card1:hover .card-inner, .card2:hover .card-inner, .card3:hover .card-inner, .card4:hover .card-inner{
+.card:hover .card-inner{
     transform: rotateY(180deg);
 }
 #card-front, #card-back{
@@ -63,12 +63,15 @@
 }
 #card-front img{
     width: 22%;
-    height: 18%;
+    height: 23%;
 }
 #align-text img{
-    width:40%;
-    height:50%; 
+    width:30%;
+    height:40%; 
     padding: 5%;
+}
+#ang{
+    filter: invert(1);
 }
 @keyframes glowing {
     0% {
