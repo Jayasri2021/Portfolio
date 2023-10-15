@@ -1,3 +1,6 @@
+body{
+    /* margin-bottom: 10rem; */
+}
 .Logo-skills{
     padding: 2%;
     display: flex;
@@ -9,18 +12,18 @@
     height: auto;
     width: 17vw; 
 }
-.main{
+.main-skills{
     padding: 5%;
-    width:auto;
-    height:auto;
+    width:100vw;
+    height:100vh;
     background-color: #101113;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10%;
 }
 .card{
-    width: 17vw;
-    height: 40vh;
+    width: 70%;
+    height: 80%;
     border: 2px solid transparent;
     border-radius: 2rem; 
     box-shadow: 0 0 3rem rgba(169, 94, 209, 0.5);
