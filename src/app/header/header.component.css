@@ -1,12 +1,16 @@
-.Header-F{
+body{
+    background-color: rgb(30, 30, 30);
+    height: auto;
+}
+.Full-header{
     background-color: rgb(30, 30, 30);
     position:fixed;
     display: flex;
     width: 100%;
-    height: auto;
     flex-shrink: 0;
     justify-content: space-between;
-    z-index: 5;
+    align-items: center;
+    z-index: 100;
 }
 #Logo-head img{
     padding-left: 0.3rem;
