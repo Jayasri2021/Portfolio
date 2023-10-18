@@ -2,12 +2,11 @@ body{
     background-color: #101011;
 }
 .scroll-container {
-    background-color: #333;
+    background-color: #1e1e11;
     overflow: auto;
     white-space: nowrap;
     padding: 1%;
-}
-  
+} 
 .scroll-container img {
     padding: 10px;
     width:40%;
@@ -15,6 +14,7 @@ body{
 }
 .logo-cert{
     text-align: center;
+    padding: 1%;
 }
 .logo-cert img{
     width: 40%;
