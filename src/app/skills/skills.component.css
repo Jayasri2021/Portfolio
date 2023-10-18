@@ -1,83 +1,98 @@
-body{
-    background-color: #101113; 
-    height:auto;
+body {
+    background-color: #101113;
+    height: auto;
 }
-.Logo-skills{
+
+.Logo-skills {
     text-align: center;
 }
-.Logo-skills img{
+
+.Logo-skills img {
     height: auto;
-    width: 15vw; 
+    width: 15vw;
 }
-.main-skills{
-    width:100%;
-    height:100vh;
+
+.main-skills {
+    width: 100%;
+    height: 100vh;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 5%;
 }
-.card{
+
+.card {
     width: 75%;
     height: 90%;
     border: 2px solid transparent;
-    border-radius: 2rem; 
+    border-radius: 2rem;
     box-shadow: 0 0 3rem rgba(169, 94, 209, 0.5);
     animation: glowing 0.8s infinite alternate;
     background-color: rgb(30, 30, 30);
     /* perspective: 150rem; */
 }
-.card-inner{
+
+.card-inner {
     width: 100%;
     height: 100%;
-    position:relative;
+    position: relative;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-.card:hover .card-inner{
+
+.card:hover .card-inner {
     transform: rotateY(180deg);
 }
-#card-front, #card-back{
-    position:absolute;
+
+#card-front,
+#card-back {
+    position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-#card-front{
+
+#card-front {
     color: #876ab1;
     transform: rotateY(0deg);
     display: flex;
-    gap:3%;
+    gap: 3%;
     justify-content: center;
     align-items: center;
 }
-#card-back{
+
+#card-back {
     transform: rotateY(180deg);
     color: rgb(255, 255, 255);
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
-#card-front img{
+
+#card-front img {
     width: 25%;
     height: 33%;
 }
-#align-text img{
-    width:27%;
-    height:40%; 
+
+#align-text img {
+    width: 27%;
+    height: 40%;
     padding: 2%;
     text-align: center;
 }
-#ang{
+
+#ang {
     filter: invert(1);
 }
+
 @keyframes glowing {
     0% {
         box-shadow: 0 0 1.5rem rgba(67, 28, 88, 0.5);
     }
+
     100% {
         box-shadow: 0 0 1.5rem rgba(229, 181, 255, 0.5);
     }
-  }
+}
