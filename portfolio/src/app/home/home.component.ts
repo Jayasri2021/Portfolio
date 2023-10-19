@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
+  viewResume() {
+  const resumeUrl = '../../assets/Resume.pdf';
+    
+    window.open(resumeUrl, '_blank');
+  }
 }

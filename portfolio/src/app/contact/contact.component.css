@@ -18,7 +18,6 @@
 #col2 img{
     width: 6%;
     height:auto; 
-    /* padding-bottom: 1%; */
 }
 #col2 p{
     display: flex;
@@ -48,5 +47,4 @@
     color:#bdafe0;
     font-size: 80%;
     text-align: center;
-    /* padding: 1rem; */
 }

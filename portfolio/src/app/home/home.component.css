@@ -1,18 +1,23 @@
-.main{
+body {
     background-color: #101113;
-    width: auto;
     height: auto;
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
 }
-#Image img{
-    height: 50%;
-    width: 50%;
-    margin-left:20%;
+
+.main-home {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    padding-bottom: 1%;
+}
+
+#Image-home img {
+    height: 40%;
+    width: 40%;
+    margin-left: 20%;
     margin-top: 23%;
-    float:left;
 }
-.main1{
+
+.main2-home {
     color: #ffffff;
     font-family: "fantasy";
     font-style: italic;
@@ -20,18 +25,66 @@
     text-align: right;
     padding-top: 20%;
     width: auto;
-    margin-right:20%;
-    
+    margin-right: 15%;
 }
-#Jayasri,#Developer {
-    color:#ffffff;
+
+#Jayasri,
+#Developer {
+    color: #ffffff;
     font-family: "ABeeZee";
     font-style: italic;
     font-size: 170%;
     text-transform: uppercase;
     color: white;
-  text-shadow: 1px 1px 2px black, 0 0 25px rgb(91, 91, 166), 0 0 5px rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(204, 158, 191), 0 0 5px rgb(255, 255, 255);
 }
-#color {
-    color:#bdafe0;
+
+#color-home {
+    color: #bdafe0;
 }
+.main-res{
+    background-color: #101113;
+    font-size:120%;
+    text-align: center;
+    font-family: 'Times New Roman';
+    width: auto;
+    height:auto;
+    padding: 2rem 5rem 1rem 5rem;
+}
+.main-res button{
+    background: none;
+    border-radius: 1rem;
+    border: 0.2rem solid #ffffff;
+    padding: 0.7rem;
+    color:aliceblue;
+    transition: all 0.2s;
+  animation: bounce 2s infinite linear;
+  position: relative;
+}
+.main-res button:hover{
+    border-color:#876ab1;
+    color:#876ab1;
+}
+@keyframes bounce {
+    0% {
+      top: 0em;
+    }
+    40% {
+      top: 0em;
+    }
+    43% {
+      top: -1em;
+    }
+    46% {
+      top: 0em;
+    }
+    48% {
+      top: -0.5em;
+    }
+    50% {
+      top: 0em;
+    }
+    100% {
+      top: 0em;
+    }
+  }

@@ -1,30 +1,26 @@
-.top{
+body{
     background-color: #101113;
-    color:#ffffff;
-    width: auto;
-    height:auto;
-    padding-top:2%;
-}
-.top img{
-    width: 18%;
     height: auto;
-    display: block;
-    margin-right:auto;
-    margin-left:auto;
-}
-.main{
-    background-color: #101113;
-    font-size:120%;
-    text-align: center;
-    font-family: 'Times New Roman';
     width: auto;
-    height:auto;
-    padding: 2rem 5rem 1rem 5rem;
 }
-.main button{
-    background: none;
-    border-radius: 1rem;
-    border: 0.2rem solid #ffffff;
-    padding: 0.7rem;
-    color:aliceblue;
+.work-logo img{
+    width: 45%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-w{
+    display: flex;
+    gap: 15%;
+    padding: 3%;
+}
+.main-w img{
+    width: 25%;
+    height:auto;
+}
+.main-w p{
+    color:#876ab1;
+    font-size: 115%;
+    font-style: italic;
+    text-align:justify;
 }
