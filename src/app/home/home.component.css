@@ -1,10 +1,8 @@
 body {
-    background-color: #101113;
+    background-color: #b4daa7;
     height: auto;
 }
-
 .main-home {
-    width: 100vw;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     padding-bottom: 1%;
@@ -18,7 +16,7 @@ body {
 }
 
 .main2-home {
-    color: #ffffff;
+    color: black;
     font-family: "fantasy";
     font-style: italic;
     font-size: 120%;
@@ -30,40 +28,36 @@ body {
 
 #Jayasri,
 #Developer {
-    color: #ffffff;
-    font-family: "ABeeZee";
-    font-style: italic;
-    font-size: 170%;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px rgb(204, 158, 191), 0 0 5px rgb(255, 255, 255);
+    font-family: "Allura";
+    font-size: 270%;
+    color: #4a785e;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 30px #b4daa7, 0 0 10px #4a785e;
 }
 
 #color-home {
-    color: #bdafe0;
+    color: #4a785e;
 }
 .main-res{
-    background-color: #101113;
     font-size:120%;
     text-align: center;
-    font-family: 'Times New Roman';
+    font-family: 'Times new roman';
     width: auto;
     height:auto;
-    padding: 2rem 5rem 1rem 5rem;
+   
 }
 .main-res button{
+    margin-top: 5rem;
     background: none;
     border-radius: 1rem;
-    border: 0.2rem solid #ffffff;
-    padding: 0.7rem;
-    color:aliceblue;
-    transition: all 0.2s;
-  animation: bounce 2s infinite linear;
-  position: relative;
+    border: 2px solid #F6f4c3;
+    color:#F6f4c3;
+    padding: 0.5rem;
 }
 .main-res button:hover{
-    border-color:#876ab1;
-    color:#876ab1;
+  border:2px solid #4a785e;
+  color:#4a785e;
+  animation: bounce 2s infinite linear;
+  transition: all 0.2s;
 }
 @keyframes bounce {
     0% {
