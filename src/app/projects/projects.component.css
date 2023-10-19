@@ -20,7 +20,7 @@ body{
 }
 #proj {
     padding: 1%;
-    border: 0.1rem solid #876ab1;
+    border: 2px solid #876ab1;
     background-color: #101010;
     border-radius: 1rem;
     width: 28%;
@@ -28,7 +28,7 @@ body{
     margin-bottom: 2%;
 }
 #proj:hover {
-    border: 0.4rem double #64468e;
+    border: 2px double #64468e;
     background-color: #ffffff;
 }
 #proj img {
@@ -37,6 +37,6 @@ body{
     border-radius: 0.3rem;
 }
 a{
-    color: #101010;
+    color: #101113;
     text-decoration: none;
 }

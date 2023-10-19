@@ -1,0 +1,26 @@
+body{
+    background-color: #101113;
+    height: auto;
+    width: auto;
+}
+.work-logo img{
+    width: 45%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-w{
+    display: flex;
+    gap: 15%;
+    padding: 3%;
+}
+.main-w img{
+    width: 25%;
+    height:auto;
+}
+.main-w p{
+    color:#876ab1;
+    font-size: 115%;
+    font-style: italic;
+    text-align:justify;
+}
