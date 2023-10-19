@@ -1,17 +1,17 @@
 body{
-    background-color: rgb(30, 30, 30);
-    height: auto;
+    background-color: #F6f4c3;
 }
 .Full-header{
-    background-color: rgb(30, 30, 30);
+    background-color: #F6f4c3;
     position:fixed;
     display: flex;
-    width: 100%;
-    height: auto;
+    width:100vw;
+    height: 7%;
     justify-content: space-around;
+    align-items: center;
     z-index: 100;
 }
-#Logo-head p{
+#Logo-head{
     font-family: "Allura";
     font-size:300%;
 }
@@ -21,18 +21,19 @@ body{
     align-items: center;    
     gap: 25px; 
 }
-.menu-h p{
+.menu-h a{
     font-family: 'Courier';
     text-decoration: none;
     font-size: 110%;
+    font-weight: bold;
 }
-.menu-h p:hover{
-    background-color:#101113;
+.menu-h a:hover{
     border-radius: 1rem;
-    border: 1px solid #fff;
+    border: 1px solid #4a785e;
+    padding: 1%;
+    background-color: #101113;
     font-size: 115%;
 }
 a{  
-    text-decoration: none;
-    color:#bdafe0;
+    color:#4a785e; 
 }

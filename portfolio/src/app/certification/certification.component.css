@@ -1,8 +1,8 @@
 body{
-    background-color: #101113;
+    background-color: #b4daa7;
 }
 .scroll-container {
-    background-color: #1e1e11;
+    background-color: #4a785e;
     overflow: auto;
     white-space: nowrap;
     padding: 1%;
@@ -12,10 +12,10 @@ body{
     width:40%;
     height:30%;
 }
-.logo-cert{
+p{
     text-align: center;
-    padding: 1%;
+    font-family: "Allura";
+    color: #4a785e;
+    font-size: 370%;
+    font-weight: bold;
 }
-.logo-cert img{
-    width: 40%;
-  }

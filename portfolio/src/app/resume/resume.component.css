@@ -1,13 +1,14 @@
 body{
-    background-color: #101113;
+    background-color: #b4daa7;
     height: auto;
     width: auto;
 }
-.work-logo img{
-    width: 45%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.work-logo p{
+    text-align: center;
+    font-family: "Allura";
+    color: #4a785e;
+    font-size: 370%;
+    font-weight: bold;
 }
 .main-w{
     display: flex;
@@ -19,7 +20,7 @@ body{
     height:auto;
 }
 .main-w p{
-    color:#876ab1;
+    color: #4a785e;
     font-size: 115%;
     font-style: italic;
     text-align:justify;
