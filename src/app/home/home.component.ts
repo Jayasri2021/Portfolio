@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   viewResume() {
   const resumeUrl = '../../assets/Resume.pdf';
-    
     window.open(resumeUrl, '_blank');
   }
 }

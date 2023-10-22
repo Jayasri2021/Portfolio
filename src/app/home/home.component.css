@@ -1,84 +1,58 @@
 body {
     background-color: #b4daa7;
     height: auto;
+    width: auto;
 }
 .main-home {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    padding-bottom: 1%;
+    padding-bottom: 2rem;
 }
-
 #Image-home img {
     height: 40%;
-    width: 40%;
-    margin-left: 20%;
-    margin-top: 23%;
+    width: 37.5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-top: 14.5%;
 }
-
 .main2-home {
     color: black;
     font-family: "fantasy";
     font-style: italic;
     font-size: 120%;
     text-align: right;
-    padding-top: 20%;
+    padding-top: 14%;
     width: auto;
     margin-right: 15%;
 }
-
 #Jayasri,
 #Developer {
     font-family: "Allura";
     font-size: 270%;
     color: #4a785e;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 30px #b4daa7, 0 0 10px #4a785e;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 30px #66895c, 0 0 10px #4a785e;
 }
-
 #color-home {
     color: #4a785e;
 }
-.main-res{
+#main-res{
     font-size:120%;
     text-align: center;
     font-family: 'Times new roman';
     width: auto;
-    height:auto;
-   
+    height:auto;  
 }
-.main-res button{
-    margin-top: 5rem;
+#main-res button{
+    margin-top: 5%;
     background: none;
     border-radius: 1rem;
     border: 2px solid #F6f4c3;
-    color:#F6f4c3;
+    color:#4a785e;
     padding: 0.5rem;
 }
-.main-res button:hover{
-  border:2px solid #4a785e;
-  color:#4a785e;
-  animation: bounce 2s infinite linear;
-  transition: all 0.2s;
+#main-res button:hover{
+  border:10px double #4a785e;
+  color:#F6f4c3;
 }
-@keyframes bounce {
-    0% {
-      top: 0em;
-    }
-    40% {
-      top: 0em;
-    }
-    43% {
-      top: -1em;
-    }
-    46% {
-      top: 0em;
-    }
-    48% {
-      top: -0.5em;
-    }
-    50% {
-      top: 0em;
-    }
-    100% {
-      top: 0em;
-    }
-  }
