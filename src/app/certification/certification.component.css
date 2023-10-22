@@ -1,5 +1,8 @@
 body{
     background-color: #b4daa7;
+    padding-bottom: 2%;
+    width: 100vw;
+    height: auto;
 }
 .scroll-container {
     background-color: #4a785e;

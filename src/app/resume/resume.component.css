@@ -1,9 +1,10 @@
 body{
     background-color: #b4daa7;
     height: auto;
-    width: auto;
+    width: 100vw;
+    padding-bottom: 2%;
 }
-.work-logo p{
+#work-logo{
     text-align: center;
     font-family: "Allura";
     color: #4a785e;
@@ -11,17 +12,19 @@ body{
     font-weight: bold;
 }
 .main-w{
-    display: flex;
-    gap: 15%;
-    padding: 3%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 5%;
+    padding: 0% 5% 2% 5%;
 }
 .main-w img{
-    width: 25%;
+    padding-top: 1%;
+    width: 50%;
     height:auto;
 }
 .main-w p{
     color: #4a785e;
     font-size: 115%;
-    font-style: italic;
+    font-style:italic;
     text-align:justify;
 }

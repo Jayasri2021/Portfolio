@@ -1,12 +1,12 @@
 body {
     background-color: #b4daa7;
     height: auto;
-    width: auto;
+    width: 100vw;
+    padding-bottom: 2%;
 }
 .main-home {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    padding-bottom: 2rem;
 }
 #Image-home img {
     height: 40%;
@@ -18,9 +18,10 @@ body {
     margin-top: 14.5%;
 }
 .main2-home {
-    color: black;
-    font-family: "fantasy";
+    color: rgb(5, 32, 25);
+    font-family: 'Courier';
     font-style: italic;
+    font-weight: bold;
     font-size: 120%;
     text-align: right;
     padding-top: 14%;
@@ -38,21 +39,25 @@ body {
     color: #4a785e;
 }
 #main-res{
-    font-size:120%;
     text-align: center;
-    font-family: 'Times new roman';
+    font-family: 'Courier';
     width: auto;
     height:auto;  
 }
-#main-res button{
+#main-res button
+{
     margin-top: 5%;
     background: none;
-    border-radius: 1rem;
-    border: 2px solid #F6f4c3;
+    border: 3px solid #F6f4c3;
     color:#4a785e;
-    padding: 0.5rem;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 0.5rem;    
 }
 #main-res button:hover{
   border:10px double #4a785e;
   color:#F6f4c3;
+}
+#main-res img{
+    width: 10%;
 }

@@ -1,9 +1,10 @@
 body{
-    width: auto;
+    width: 100vw;
     height: auto;
     background-color: #b4daa7;
+    padding-bottom: 2%;
 }
-p {
+#pro-logo{
     text-align: center;
     font-family: "Allura";
     color: #4a785e;
@@ -11,27 +12,29 @@ p {
     font-weight: bold;
 }
 .Main-pro {
-    display: flex;
-    place-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    align-items: center;
+    justify-items: center;
     justify-content: space-between;
 }
 #proj {
-    padding: 1%;
-    border: 2px solid #4a785e;
+    padding: 2%;
+    border: 3px solid #000000;
     background-color: #4a785e;
     border-radius: 1rem;
-    width: 28%;
+    width: 60%;
     height: auto;
     margin-bottom: 2%;
-}
+} 
 #proj:hover {
-    border: 15px double #f6f4c3;
+    border: 5px double #f6f4c3;
     background-color: #b4daa7;
 }
 #proj img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.3rem;
+    width:100%;
+    height:250px;
+    border-radius: 0.6rem;
 }
 a{
     color: #4a785e;
