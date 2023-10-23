@@ -12,6 +12,9 @@ body{
     align-items: center;
     z-index: 100;
 }
+.Full-header a{
+    text-decoration: none;
+}
 #Logo-head{
     font-family: "Allura";
     font-size:300%;
@@ -29,11 +32,11 @@ body{
     font-weight: bold;
 }
 .menu-h a:hover{
-    border-radius: 1rem;
     border: 1px solid #4a785e;
     padding: 1%;
-    background-color: #101113;
-    font-size: 115%;
+    background-color: #b4daa7;
+    font-size: 110%;
+    box-shadow: 0px 1px 2px rgb(0, 0, 0), 0 0 20px #5bab45, 0 0 10px #4a785e;
 }
 a{  
     color:#4a785e; 

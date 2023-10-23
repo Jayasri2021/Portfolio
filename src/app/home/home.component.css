@@ -2,7 +2,6 @@ body {
     background-color: #b4daa7;
     height: auto;
     width: 100vw;
-    padding-bottom: 2%;
 }
 .main-home {
     display: grid;
@@ -10,33 +9,30 @@ body {
 }
 #Image-home img {
     height: 40%;
-    width: 37.5%;
+    width: 38%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    margin-top: 14.5%;
+    padding-top:17%;
 }
 .main2-home {
-    color: rgb(5, 32, 25);
+    color: rgb(13, 53, 42);
     font-family: 'Courier';
     font-style: italic;
     font-weight: bold;
-    font-size: 120%;
-    text-align: right;
-    padding-top: 14%;
+    font-size: 125%;
+    text-align: justify;
+    padding-top: 15%;
     width: auto;
     margin-right: 15%;
 }
-#Jayasri,
-#Developer {
+#Jayasri{
     font-family: "Allura";
+    text-align: right;
     font-size: 270%;
     color: #4a785e;
-    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 30px #66895c, 0 0 10px #4a785e;
-}
-#color-home {
-    color: #4a785e;
+    text-shadow: 0px 1px 2px rgb(255, 255, 255), 0 0 30px #5bab45, 0 0 10px #4a785e;
 }
 #main-res{
     text-align: center;
@@ -46,13 +42,15 @@ body {
 }
 #main-res button
 {
-    margin-top: 5%;
+    margin-top: 6%;
     background: none;
     border: 3px solid #F6f4c3;
     color:#4a785e;
     font-size: 120%;
     font-weight: bold;
-    padding: 0.5rem;    
+    padding: 0.5rem;  
+    box-shadow: 0px 1px 2px rgb(255, 255, 255), 0 0 30px #5bab45, 0 0 10px #4a785e;
+  
 }
 #main-res button:hover{
   border:10px double #4a785e;
