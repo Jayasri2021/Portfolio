@@ -9,11 +9,10 @@ body {
 }
 #Image-home img {
     height: 40%;
-    width: 38%;
+    width: 35%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    align-items: center;
     padding-top:17%;
 }
 .main2-home {
@@ -30,7 +29,7 @@ body {
 #Jayasri{
     font-family: "Allura";
     text-align: right;
-    font-size: 270%;
+    font-size: 250%;
     color: #4a785e;
     text-shadow: 0px 1px 2px rgb(255, 255, 255), 0 0 30px #5bab45, 0 0 10px #4a785e;
 }
@@ -54,7 +53,4 @@ body {
 #main-res button:hover{
   border:10px double #4a785e;
   color:#F6f4c3;
-}
-#main-res img{
-    width: 10%;
 }
