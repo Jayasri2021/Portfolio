@@ -50,7 +50,6 @@ body {
     font-weight: bold;
     padding: 0.5rem;  
     box-shadow: 0px 1px 2px rgb(255, 255, 255), 0 0 30px #5bab45, 0 0 10px #4a785e;
-  
 }
 #main-res button:hover{
   border:10px double #4a785e;
