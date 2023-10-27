@@ -8,11 +8,12 @@
 </head>
 <body>
   <div class="Full-header">
-    <a routerLink="/contact" routerLinkActive="active" id="ccontact"
-      ><p id="Logo-head">svj</p></a
-    >
+    <!-- <a routerLink="/home" routerLinkActive="active" id="home"
+      >
+      </a -->
+    <p id="Logo-head">svj</p>
     <div class="menu-h">
-      <a routerLink="/home" routerLinkActive="active" id="home">Home</a>
+      <!-- <a routerLink="/home" routerLinkActive="active" id="home">Home</a>
       <a routerLink="/skills" routerLinkActive="active" id="skills">Skills</a>
       <a
         routerLink="/certification"
@@ -23,10 +24,14 @@
       <a routerLink="/projects" routerLinkActive="active" id="projects"
         >Projects</a
       >
-
       <a routerLink="/resume" routerLinkActive="active" id="resume"
         >Experience</a
-      >
+      > -->
+      <a (click)="scrollToSection('home')">Home</a>
+      <a (click)="scrollToSection('skills')">Skills</a>
+      <a (click)="scrollToSection('certifications')">Certifications</a>
+      <a (click)="scrollToSection('projects')">Projects</a>
+      <a (click)="scrollToSection('experience')">Experience</a>
     </div>
   </div>
 </body>

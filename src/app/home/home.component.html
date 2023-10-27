@@ -8,31 +8,41 @@
 </head>
 <app-header></app-header>
 <body>
-  <div class="main-home">
-    <div id="main1-home">
-      <div id="Image-home">
-        <img src="../../assets/Sample-Profile1.png" />
+  <div id="home">
+    <div class="main-home">
+      <div id="main1-home">
+        <div id="Image-home">
+          <img src="../../assets/Sample-Profile1.png" />
+        </div>
+        <div id="main-res">
+          <button (click)="viewResume()">View Full Resume!</button>
+        </div>
       </div>
-      <div id="main-res">
-        <button (click)="viewResume()">View Full Resume!</button>
+      <div class="main2-home">
+        <div id="Jayasri">I'm Jayasri</div>
+        <div id="Jayasri">A Developer</div>
+        <p>
+          I am dedicated to the ceaseless pursuit of unraveling life's intricate
+          puzzles. My approach is a fusion of intelligence and diligent effort,
+          encapsulating qualities of being both organized and imaginative. I
+          thrive on continuous learning, honing my skills and uncovering latent
+          talents. My adaptability knows no bounds, effortlessly acclimating to
+          fresh environments and emerging technologies.
+        </p>
       </div>
-    </div>
-    <div class="main2-home">
-      <div id="Jayasri">I'm Jayasri</div>
-      <div id="Jayasri">A Developer</div>
-      <p>
-        I am dedicated to the ceaseless pursuit of unraveling life's intricate
-        puzzles. My approach is a fusion of intelligence and diligent effort,
-        encapsulating qualities of being both organized and imaginative. I
-        thrive on continuous learning, honing my skills and uncovering latent
-        talents. My adaptability knows no bounds, effortlessly acclimating to
-        fresh environments and emerging technologies.
-      </p>
     </div>
   </div>
 </body>
-<app-skills></app-skills>
-<app-certification></app-certification>
-<app-projects></app-projects>
-<app-resume></app-resume>
+<div id="skills">
+  <app-skills></app-skills>
+</div>
+<div id="certifications">
+  <app-certification></app-certification>
+</div>
+<div id="projects">
+  <app-projects></app-projects>
+</div>
+<div id="experience">
+  <app-resume></app-resume>
+</div>
 <app-contact></app-contact>

@@ -33,6 +33,7 @@ body{
 }
 .menu-h a:hover{
     border: 1px solid #4a785e;
+    border-radius: 0.6rem;
     padding: 1%;
     background-color: #b4daa7;
     font-size: 110%;

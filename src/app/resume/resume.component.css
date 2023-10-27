@@ -3,6 +3,7 @@ body{
     height:auto;
     width: 100vw;
     padding-top: 2%;
+    padding-bottom: 2%;
 }
 #logo-exp{
     text-align: center;
@@ -12,22 +13,23 @@ body{
     font-weight: bold;
 }
 .exp-page{
-    padding: 0% 5% 0% 5%;
+    padding: 0% 14% 0% 7%;
 }
 #exp{
+    padding-top: 2%;
     display: flex;
     gap: 5%;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
-#exp img{
-    padding: 1%;
+#expimg{
     text-align: center;
-    width: 25%;
-    height:auto;
+    width: 280px;
+    height:200px;
     filter: drop-shadow(5px 5px 5px #000000);
 }
-#exp p{
-    padding-top: 1%;
+#des{
+    place-items:center;
     font-family: 'Courier';
     color: #4a785e;
     font-size: 120%;

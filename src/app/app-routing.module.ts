@@ -14,11 +14,11 @@ const routes: Routes = [
     component: AppComponent,
     children: [
       { path: 'home', component: HomeComponent },
-      { path: 'skills', component: SkillsComponent},
-      { path: 'certification', component:CertificationComponent},
-      { path: 'projects', component: ProjectsComponent},
-      { path: 'contact', component:ContactComponent},
-      { path: 'resume', component:ResumeComponent},
+      // { path: 'skills', component: SkillsComponent},
+      // { path: 'certification', component:CertificationComponent},
+      // { path: 'projects', component: ProjectsComponent},
+      // { path: 'contact', component:ContactComponent},
+      // { path: 'resume', component:ResumeComponent},
       { path: '**', redirectTo: 'home' },]
   }
 ];

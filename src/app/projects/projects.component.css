@@ -1,10 +1,12 @@
-body{
+body {
     background-color: #b4daa7;
-    height:auto;
     width: 100vw;
     padding-top: 2%;
 }
-#pro-logo{
+.parent {
+    height: auto;
+}
+#pro-logo {
     text-align: center;
     font-family: "Allura";
     color: #4a785e;
@@ -13,35 +15,35 @@ body{
 }
 .Main-pro {
     width: 100%;
-    height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    gap:3%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
     align-items: center;
-    justify-items: center; 
-    /* position: relative; */
+    justify-items: center;
 }
 #proj img {
-    width:85%;
-    height:300px;
+    width: 85%;
+    height: 300px;
     border-radius: 0.6rem;
+    padding-bottom: 5%;
 }
-
 #proj{
-    text-align: center; 
+    text-align: center;
     background-color: #4a785e;
-    border-radius: 0.6rem;
-    padding:2%;
+    border-radius: 1rem;
+    padding: 1.5%;
     width: 75%;
-    height:auto;
+    position: relative;
+    height: auto;
     box-shadow: 0 0 3rem #000000;
-} 
+    border: 10px solid #4a785e;
+
+}
 #proj:hover {
     border: 10px double #f6f4c3;
     background-color: #4a785e;
 }
-
-a{
+a {
     color: #b4daa7;
     font-size: large;
     font-family: 'Courier';
@@ -49,26 +51,27 @@ a{
     text-align: justify;
     text-decoration: none;
 }
-#other-proj{
-    margin-top: 2%;
+#other-proj {
+    padding-top: 2%;
     text-align: center;
     font-family: 'Courier';
     width: auto;
-    height:auto;  
-    z-index: 100;
+    height: auto;
+    position: relative;
 }
-#other-proj button
-{
+#other-proj button {
+    border-radius: 0.6rem;
+    margin-top: 20px;
     background: none;
     border: 0.4rem solid #F6f4c3;
-    color:#4a785e;
-    font-size: 120%;
+    color: #4a785e;
+    font-size:18px;
     font-weight: bold;
 }
-#other-proj button:hover{
-  border:0.4rem double #4a785e;
-  color:#F6f4c3;
+#other-proj button:hover {
+    border: 0.4rem solid #4a785e;
+    color: #F6f4c3;
 }
-#other-proj img{
-    width:9%;
+#other-proj img {
+    width: 9%;
 }
