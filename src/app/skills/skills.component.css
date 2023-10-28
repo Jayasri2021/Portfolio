@@ -14,7 +14,7 @@ body {
 }
 
 .main-skills {
-    width: auto;
+    width: 100%;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -25,6 +25,10 @@ body {
 .card {
     width: 65%;
     height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 2px solid transparent;
     border-radius: 2rem;
     box-shadow: 0 0 3rem #000000;
@@ -101,5 +105,25 @@ body {
 
     100% {
         box-shadow: 0 0 2.2rem #b4daa7;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .main-skills {
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo-skills {
+        font-size: 350%;
+    }
+
+    #card-front p {
+
+        font-size: 150%;
+
     }
 }

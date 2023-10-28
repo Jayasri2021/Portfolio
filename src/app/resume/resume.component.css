@@ -56,10 +56,20 @@ body {
         padding: 2% 10%;
         /* Adjust the padding for smaller screens */
     }
+
+    #des {
+        margin-top: 5%;
+    }
 }
 
 @media (max-width: 500px) {
     body {
         width: 100%;
     }
+
+    #logo-exp {
+        font-size: 250%;
+    }
+
+
 }

@@ -1,24 +1,46 @@
-body{
+body {
     background-color: #b4daa7;
     padding-top: 2%;
     width: 100vw;
     height: auto;
 }
-p{
+
+p {
     text-align: center;
     font-family: "Allura";
     color: #4a785e;
     font-size: 370%;
     font-weight: bold;
 }
+
 .scroll-container {
     background-color: #4a785e;
     overflow: auto;
     white-space: nowrap;
     padding: 1%;
-} 
-.scroll-container img {
-    padding: 0.5%;
-    width:35%;
 }
 
+.scroll-container img {
+    padding: 0.5%;
+    width: 35%;
+}
+
+@media only screen and (max-width: 714px) {
+    .scroll-container img {
+        padding: 0.5%;
+        width: 75%;
+    }
+
+    p {
+        padding-top: 6%;
+        font-size: 300%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+    p {
+        padding-top: 6%;
+        font-size: 280%;
+    }
+}

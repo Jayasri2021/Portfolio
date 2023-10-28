@@ -12,6 +12,8 @@ body {
 .main-home {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    align-items: center;
+    justify-content: center;
 }
 
 #Image-home img {
@@ -24,21 +26,23 @@ body {
 }
 
 .main2-home {
-    color: rgb(13, 53, 42);
     font-family: 'Courier';
-    font-style: italic;
-    font-weight: bold;
     font-size: 125%;
     text-align: justify;
     padding-top: 15%;
-    width: auto;
-    margin-right: 15%;
+    width: fit-content;
+    padding-right: 15%;
+    font-weight: bold;
     /* text-align: center; */
 }
 
+
 #Jayasri {
+    color: rgb(13, 53, 42);
+    font-style: italic;
+    font-weight: bold;
     font-family: "Allura";
-    text-align: right;
+    text-align: center;
     font-size: 250%;
     color: #4a785e;
     text-shadow: 0px 1px 2px rgb(255, 255, 255), 0 0 30px #5bab45, 0 0 10px #4a785e;
@@ -66,4 +70,64 @@ body {
 #main-res button:hover {
     border: 10px double #4a785e;
     color: #F6f4c3;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    .main2-home {
+        text-align: center;
+        padding-right: 0%;
+    }
+
+    #Jayasri {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .main2-home {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #main-res button {
+        /* width: 14rem; */
+        height: auto;
+        font-size: 100%;
+        font-weight: bold;
+    }
+
+    #Jayasri {
+        font-size: 200%;
+
+    }
+
+    #para {
+        font-size: 17px;
+        padding-left: 90px;
+        font-weight: bold;
+        padding-right: 15%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #main-res button {
+        height: auto;
+        font-size: 100%;
+        font-weight: bold;
+    }
+
+    #Jayasri {
+        font-size: 200%;
+
+    }
+
+    #para {
+        font-size: 17px;
+        padding-left: 15%;
+        padding-right: 15%;
+        font-weight: bold;
+    }
 }
