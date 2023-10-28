@@ -2,7 +2,7 @@ body {
     padding-top: 2%;
     background-color: #F6f4c3;
     width: 100vw;
-    height: 45vh;
+    height: 35vh;
 }
 
 .main {
@@ -30,7 +30,6 @@ img {
     margin-right: 1%;
 }
 
-
 #col2 a,
 #col3 a {
     text-decoration: none;
@@ -41,6 +40,9 @@ img {
 }
 
 @media only screen and (max-width: 720px) {
+    body{
+        height:45vh;
+    }
     .main {
         display: flex;
         flex-direction: column;
