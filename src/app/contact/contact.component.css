@@ -1,34 +1,52 @@
-body{
+body {
     padding-top: 2%;
     background-color: #F6f4c3;
     width: 100vw;
-    height: auto;
+    height: 45vh;
 }
-.main{
+
+/* html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+.main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     justify-items: center;
-    align-items: center;   
+    align-items: center;
+    background-color: #F6f4c3;
+    width: 100%;
+    height: 100%;
 }
-#col1{
+
+#col1 {
     font-family: "Allura";
     color: #4a785e;
     font-size: 270%;
     font-weight: bold;
     justify-items: center;
-    text-align: center; 
+    text-align: center;
 }
-#col2 p, #col3 p{
-    font-size:15.7px;
+
+#col2 p,
+#col3 p {
+    font-size: 15.7px;
     font-weight: bold;
     text-align: justify;
 }
-img{
-    width: 10%; 
-    margin-right:1%;
+
+img {
+    width: 10%;
+    margin-right: 1%;
 }
-#col2 a, #col3 a{
+
+#col2 a,
+#col3 a {
     text-decoration: none;
-    color:#4a785e;
-    font-weight:bold;
+    color: #4a785e;
+    font-weight: bold;
 }

@@ -1,37 +1,43 @@
-body{
+body {
     background-color: #F6f4c3;
     width: 100vw;
 }
-.Full-header{
+
+.Full-header {
     background-color: #F6f4c3;
-    position:fixed;
+    position: fixed;
     display: flex;
-    width:100vw;
+    width: 100%;
     height: 10%;
     justify-content: space-evenly;
     align-items: center;
     z-index: 100;
 }
-.Full-header a{
+
+.Full-header a {
     text-decoration: none;
 }
-#Logo-head{
+
+#Logo-head {
     font-family: "Allura";
-    font-size:300%;
+    font-size: 300%;
 }
-.menu-h{
+
+.menu-h {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;    
-    gap: 25px; 
+    align-items: center;
+    gap: 25px;
 }
-.menu-h a{
+
+.menu-h a {
     font-family: 'Courier';
     text-decoration: none;
     font-size: 110%;
     font-weight: bold;
 }
-.menu-h a:hover{
+
+.menu-h a:hover {
     border: 1px solid #4a785e;
     border-radius: 0.6rem;
     padding: 1%;
@@ -39,9 +45,11 @@ body{
     font-size: 110%;
     box-shadow: 0px 1px 2px rgb(0, 0, 0), 0 0 20px #5bab45, 0 0 10px #4a785e;
 }
-a{  
-    color:#4a785e; 
+
+a {
+    color: #4a785e;
 }
+
 @media only screen and (max-width: 635px) {
     a {
         display: none;

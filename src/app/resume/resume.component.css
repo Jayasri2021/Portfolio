@@ -1,39 +1,65 @@
-body{
+body {
     background-color: #b4daa7;
-    height:auto;
-    width: 100vw;
-    padding-top: 2%;
-    padding-bottom: 2%;
+    min-width: 320px;
+    /* Set a minimum width for the body */
+    padding: 2% 0;
+    /* Adjust padding */
 }
-#logo-exp{
+
+#logo-exp {
     text-align: center;
     font-family: "Allura";
     color: #4a785e;
     font-size: 370%;
     font-weight: bold;
 }
-.exp-page{
+
+.exp-page {
     padding: 0% 14% 0% 7%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* Ensure padding doesn't add to the total width */
 }
-#exp{
+
+#exp {
     padding-top: 2%;
     display: flex;
     gap: 5%;
     justify-content: center;
     align-items: center;
 }
-#expimg{
+
+#expimg {
     text-align: center;
     width: 280px;
-    height:200px;
+    height: 200px;
     filter: drop-shadow(5px 5px 5px #000000);
 }
-#des{
-    place-items:center;
+
+#des {
+    place-items: center;
     font-family: 'Courier';
     color: #4a785e;
     font-size: 120%;
-    font-style:italic;
-    text-align:justify;
+    font-style: italic;
+    text-align: justify;
     font-weight: bold;
+}
+
+@media (max-width: 728px) {
+    #exp {
+        flex-direction: column;
+    }
+
+    .exp-page {
+        padding: 2% 10%;
+        /* Adjust the padding for smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 100%;
+    }
 }

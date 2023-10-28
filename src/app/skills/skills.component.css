@@ -4,6 +4,7 @@ body {
     height: auto;
     width: 100vw;
 }
+
 #Logo-skills {
     text-align: center;
     font-family: "Allura";
@@ -11,14 +12,16 @@ body {
     font-size: 370%;
     font-weight: bold;
 }
+
 .main-skills {
-    width: 100%;
+    width: auto;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     justify-items: center;
     align-items: center;
 }
+
 .card {
     width: 65%;
     height: 80%;
@@ -28,6 +31,7 @@ body {
     animation: glowing 0.6s infinite alternate;
     background-color: #4a785e;
 }
+
 .card-inner {
     width: 100%;
     height: 100%;
@@ -36,9 +40,11 @@ body {
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
+
 .card:hover .card-inner {
     transform: rotateY(180deg);
 }
+
 #card-front,
 #card-back {
     position: absolute;
@@ -47,40 +53,47 @@ body {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 #card-front {
     transform: rotateY(0deg);
-    display: flex; 
-    gap:10%;
+    display: flex;
+    gap: 10%;
     justify-content: center;
     align-items: center;
 }
+
 #card-front img {
     width: 15%;
     height: auto;
 }
-#card-front p{
+
+#card-front p {
     font-family: "Courier";
     color: #b4daa7;
     font-size: 180%;
     font-style: italic;
     font-weight: bold;
 }
+
 #card-back {
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#align-text{
+
+#align-text {
     width: 100%;
     padding: 2%;
 }
-#align-text img{
+
+#align-text img {
     justify-items: center;
     align-items: center;
     width: 20%;
     padding: 3%;
 }
+
 @keyframes glowing {
     0% {
         box-shadow: 0 0 2.5rem #4a785e;

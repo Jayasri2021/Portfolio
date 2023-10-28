@@ -2,19 +2,27 @@ body {
     background-color: #b4daa7;
     height: auto;
     width: 100vw;
+    position: relative;
 }
+
+.parent {
+    width: 100%;
+}
+
 .main-home {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
+
 #Image-home img {
     height: 40%;
     width: 35%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top:17%;
+    padding-top: 17%;
 }
+
 .main2-home {
     color: rgb(13, 53, 42);
     font-family: 'Courier';
@@ -25,33 +33,37 @@ body {
     padding-top: 15%;
     width: auto;
     margin-right: 15%;
+    /* text-align: center; */
 }
-#Jayasri{
+
+#Jayasri {
     font-family: "Allura";
     text-align: right;
     font-size: 250%;
     color: #4a785e;
     text-shadow: 0px 1px 2px rgb(255, 255, 255), 0 0 30px #5bab45, 0 0 10px #4a785e;
 }
-#main-res{
+
+#main-res {
     text-align: center;
     font-family: 'Courier';
     width: auto;
-    height:auto;  
+    height: auto;
 }
-#main-res button
-{
+
+#main-res button {
     margin-top: 6%;
     background: none;
     border: 3px solid #F6f4c3;
     border-radius: 0.6rem;
-    color:#4a785e;
+    color: #4a785e;
     font-size: 120%;
     font-weight: bold;
-    padding: 0.5rem;  
+    padding: 0.5rem;
     box-shadow: 0px 1px 2px rgb(255, 255, 255), 0 0 30px #5bab45, 0 0 10px #4a785e;
 }
-#main-res button:hover{
-  border:10px double #4a785e;
-  color:#F6f4c3;
+
+#main-res button:hover {
+    border: 10px double #4a785e;
+    color: #F6f4c3;
 }
