@@ -46,6 +46,7 @@ body {
     background-color: #b4daa7;
     font-size: 110%;
     box-shadow: 0px 1px 2px rgb(0, 0, 0), 0 0 20px #5bab45, 0 0 10px #4a785e;
+    cursor: pointer;
 }
 
 a {

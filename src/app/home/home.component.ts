@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
   viewResume() {
-  const resumeUrl = '../../assets/Resume.pdf';
+  const resumeUrl = '../../assets/resume.pdf';
     window.open(resumeUrl, '_blank');
   }
   constructor(private router: Router) { }
