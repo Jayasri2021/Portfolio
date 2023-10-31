@@ -116,14 +116,10 @@ body {
         align-items: center;
         justify-content: center;
     }
-
     #Logo-skills {
         font-size: 350%;
     }
-
     #card-front p {
-
         font-size: 150%;
-
     }
 }
