@@ -58,7 +58,7 @@ body {
 #main-res button {
     margin-top: 6%;
     background: none;
-    border: 3px solid #F6f4c3;
+    border: 4px double #F6f4c3;
     border-radius: 0.6rem;
     color: #4a785e;
     font-size: 120%;
@@ -68,7 +68,7 @@ body {
 }
 
 #main-res button:hover {
-    border: 10px double #4a785e;
+    border: 4px double #4a785e;
     color: #F6f4c3;
 }
 
@@ -79,12 +79,10 @@ body {
         text-align: center;
         padding-right: 1%;
     }
-
     #Jayasri {
         text-align: center;
     }
 }
-
 @media only screen and (max-width: 545px) {
     .main2-home {
         padding: 20px;
@@ -92,7 +90,6 @@ body {
 }
 @media only screen and (max-width: 460px) {
     #main-res button {
-        /* width: 14rem; */
         height: auto;
         font-size: 100%;
         font-weight: bold;
@@ -100,7 +97,6 @@ body {
     #Jayasri {
         font-size: 200%;
     }
-
     #para {
         font-size: 17px;
         padding-left: 90px;
@@ -108,7 +104,6 @@ body {
         padding-right: 15%;
     }
 }
-
 @media only screen and (max-width: 320px) {
     #main-res button {
         height: auto;
