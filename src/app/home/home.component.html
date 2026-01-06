@@ -43,15 +43,16 @@
 
     <!-- Right: Image -->
     <div class="hero__media">
-      <div class="avatar" #avatar>
-        <img src="../../assets/profile-pic.jpeg" alt="Profile" />
+      <div class="avatar" #avatar oncontextmenu="return false;">
+        <div class="shimmer"></div>
+        <img src="../../assets/profile-pic.jpeg" alt="Profile" draggable="false" />
       </div>
     </div>
   </div>
 </section>
-<section id="journey"><app-journey></app-journey></section>
-<section id="skills"><app-skills></app-skills></section>
-<section id="projects"><app-projects></app-projects></section>
-<section id="certifications"><app-certification></app-certification></section>
-<section id="experience"><app-resume></app-resume></section>
-<app-contact></app-contact>
+<app-journey id="journey"></app-journey>
+<app-skills id="skills"></app-skills>
+<app-projects id="projects"></app-projects>
+<app-certification id="certifications"></app-certification>
+<app-resume id="experience"></app-resume>
+<app-contact id="contact"></app-contact>

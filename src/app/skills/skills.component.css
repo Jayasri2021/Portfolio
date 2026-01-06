@@ -1,10 +1,11 @@
 :host {
     display: block;
-    padding: 50px 0;
-    min-height: 80vh;
-    /* Ensure it takes space */
+    padding: 40px 0;
+    min-height: auto;
+    /* Removed min-height to prevent unwanted gaps */
     background-color: transparent;
     position: relative;
+    overflow: hidden;
 }
 
 /* Background Gradients */
@@ -26,7 +27,7 @@
     color: var(--primary-color);
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-family: inherit;
     position: relative;
     z-index: 1;

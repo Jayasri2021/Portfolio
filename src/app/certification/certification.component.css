@@ -1,9 +1,9 @@
 :host {
     display: block;
-    padding: 50px 0;
+    padding: 40px 0;
     position: relative;
     background-color: transparent;
-    /* Ensure base color */
+    overflow: hidden;
 }
 
 /* Background Gradients */

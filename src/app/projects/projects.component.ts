@@ -38,7 +38,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         '../assets/Biometric-proj.jpg',
         '../assets/Biometric-proj2.jpg'
       ],
-      link: 'https://github.com/Jayasri2021/Biometric-login-Omega-Binaries-Internshipn'
+      link: 'https://github.com/Jayasri2021/Biometric-login-Omega-Binaries-Internship'
     },
     {
       title: 'News Aggregation System with NER and Summarization',

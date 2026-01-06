@@ -1,7 +1,12 @@
+:host {
+    display: block;
+}
+
 .journey-section {
-    padding: 2rem 0;
+    padding: 40px 0;
     background-color: transparent;
     position: relative;
+    overflow: hidden;
 }
 
 /* Background Gradients */

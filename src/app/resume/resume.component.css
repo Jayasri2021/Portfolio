@@ -1,8 +1,11 @@
+:host {
+    display: block;
+}
+
 .experience-section {
-    padding: 5rem 0;
+    padding: 40px 0;
     background-color: transparent;
     position: relative;
-    /* Ensure stacking context */
     overflow: hidden;
 }
 
