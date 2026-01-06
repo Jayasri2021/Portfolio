@@ -1,48 +1,38 @@
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
-    rel="stylesheet"
-  />
-</head>
-
-<body>
+<div class="projects-section">
   <p id="pro-logo">Projects</p>
   <div class="parent">
     <div class="Main-pro">
-      <div id="proj">
-        <a href="https://github.com/Jayasri2021/Biometric-login">
-          <img src="../../assets/Biometric-proj.jpg" />
-          <p>
-            A biometric (Fingerprint) login page using JavaSwing and MySQL
-            Workbench, to provide high level security!
-          </p>
-        </a>
-      </div>
-      <div id="proj">
-        <a href="https://github.com/Jayasri2021/Data-Science">
-          <img src="../../assets/datascience-proj.jpg" />
-          <p>
-            Complete data analysis using packages like numpy, pandas,
-            matplotlib, scipy, seaborn, etc..
-          </p>
-        </a>
-      </div>
-      <div id="proj">
-        <a href="https://github.com/Jayasri2021/Machine-Learning">
-          <img src="../../assets/ml-proj.jpg" />
-          <p>
-            Heart Disease, Diabetes and other predictions using Machine-Learning
-            algorithms in Python!
-          </p>
+      <div id="proj" *ngFor="let proj of projects">
+        <a [href]="proj.link" target="_blank">
+          <div class="media-wrapper">
+            <!-- Automatic Slideshow of images -->
+            <ng-container *ngIf="proj.images && proj.images.length > 0">
+              <div class="slideshow-container">
+                <img *ngFor="let img of proj.images; let i = index" [src]="img" [alt]="proj.title"
+                  [class.active]="i === proj.currentImageIndex" [class.prev]="i === proj.prevImageIndex"
+                  class="slide-img" />
+              </div>
+            </ng-container>
+
+            <!-- Video/Gif fallback if no images array -->
+            <ng-container *ngIf="!proj.images || proj.images.length === 0">
+              <video *ngIf="proj.video && (proj.video.endsWith('.mp4') || proj.video.endsWith('.webm'))"
+                [src]="proj.video" autoplay loop muted playsinline></video>
+              <img *ngIf="proj.video && !proj.video.endsWith('.mp4') && !proj.video.endsWith('.webm')"
+                [src]="proj.video" [alt]="proj.title" />
+            </ng-container>
+          </div>
+          <div class="content-wrapper">
+            <h3>{{ proj.title }}</h3>
+            <p>{{ proj.description }}</p>
+          </div>
         </a>
       </div>
     </div>
     <div id="other-proj">
       <button (click)="viewOtherProj()">
-        Other Python Projects! <img src="../../assets/Link-Icon.svg" />
+        Other Python Projects! <img src="../../assets/Link-Icon.svg" alt="Link" />
       </button>
     </div>
   </div>
-</body>
+</div>

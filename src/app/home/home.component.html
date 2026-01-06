@@ -1,50 +1,57 @@
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
-    rel="stylesheet"
-  />
-</head>
 <app-header></app-header>
 
-<body>
-  <div id="home">
-    <div class="main-home">
-      <div id="main1-home">
-        <div id="Image-home">
-          <img src="../../assets/Sample-Profile1.png" />
-        </div>
-        <div id="main-res">
-          <button (click)="viewResume()">View Full Resume!</button>
-        </div>
+<section id="home" class="hero">
+  <div class="hero__container">
+    <!-- Left: Text -->
+    <div class="hero__content">
+      <p class="hero__badge">AI • Machine Learning • Software Engineering</p>
+
+      <h1 class="hero__title">
+        Jayasri <span class="hero__titleAccent">Suresh Vani</span>
+      </h1>
+
+      <p class="hero__subtitle">
+        Building intelligent, scalable systems at the intersection of engineering and applied AI.
+      </p>
+
+      <p class="hero__desc" id="para">
+        Passionate about harnessing machine learning and AI to solve real-world challenges and build
+        intelligent systems that make an impact. I thrive at the intersection of software engineering
+        and innovation, turning bold ideas into practical, scalable solutions. Driven by curiosity,
+        critical thinking, and thoughtful design, I enjoy experimenting with emerging technologies,
+        tackling complex problems, and building with purpose.
+      </p>
+
+      <div class="hero__actions">
+        <button class="btn btn--primary" (click)="viewResume()">View Resume</button>
+        <button class="btn btn--primary" (click)="viewLinkedIn()">View LinkedIn</button>
       </div>
-      <div class="main2-home">
-        <p id="Jayasri">I'm Jayasri</p>
-        <p id="Jayasri">A Developer</p>
-        <p id="para">
-          I am dedicated to the ceaseless pursuit of unraveling life's intricate
-          puzzles. My approach is a fusion of intelligence and diligent effort,
-          encapsulating qualities of being both organized and imaginative. I
-          thrive on continuous learning, honing my skills and uncovering latent
-          talents. My adaptability knows no bounds, effortlessly acclimating to
-          fresh environments and emerging technologies.
-        </p>
+
+      <div class="hero__stack">
+        <span class="pill">Python </span>
+        <span class="pill">JavaScript</span>
+        <span class="pill">SQL</span>
+        <span class="pill">Machine Learning</span>
+        <span class="pill">NLP</span>
+        <span class="pill">Computer Vision</span>
+        <span class="pill">Backend APIs</span>
+        <span class="pill">System Design</span>
+        <span class="pill">Cloud Deployment</span>
+
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="hero__media">
+      <div class="avatar" #avatar>
+        <img src="../../assets/profile-pic.jpeg" alt="Profile" />
       </div>
     </div>
   </div>
-
-  <div id="skills">
-    <app-skills></app-skills>
-  </div>
-  <div id="certifications">
-    <app-certification></app-certification>
-  </div>
-  <div id="projects">
-    <app-projects></app-projects>
-  </div>
-  <div id="experience">
-    <app-resume></app-resume>
-  </div>
-  <app-contact></app-contact>
-</body>
+</section>
+<section id="journey"><app-journey></app-journey></section>
+<section id="skills"><app-skills></app-skills></section>
+<section id="projects"><app-projects></app-projects></section>
+<section id="certifications"><app-certification></app-certification></section>
+<section id="experience"><app-resume></app-resume></section>
+<app-contact></app-contact>

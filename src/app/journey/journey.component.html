@@ -1,0 +1,25 @@
+<section class="journey-section" id="journey">
+    <div class="container">
+        <h2 class="section-title">My Tech Journey </h2>
+
+        <div class="timeline">
+            <!-- Added progress line container if we want a continuous fill line -->
+            <div class="timeline-line-bg"></div>
+            <div class="timeline-line-progress" [style.height.%]="((activeIndex + 1) / educationData.length) * 100">
+            </div>
+
+            <div class="timeline-item" *ngFor="let item of educationData; let i = index" #timelineItem
+                [class.active]="i <= activeIndex" [class.animate-in]="isVisible(i)" [class.left]="i % 2 === 0"
+                [class.right]="i % 2 !== 0">
+
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">{{ item.duration }}</div>
+                    <h3 class="timeline-title">{{ item.title }}</h3>
+                    <h4 class="timeline-subtitle">{{ item.subtitle }}</h4>
+                    <p class="timeline-desc">{{ item.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

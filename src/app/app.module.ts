@@ -10,6 +10,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { JourneyComponent } from './journey/journey.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CertificationComponent,
     ProjectsComponent,
     ContactComponent,
-    ResumeComponent
+    ResumeComponent,
+    JourneyComponent
   ],
   imports: [
     BrowserModule,

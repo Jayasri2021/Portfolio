@@ -1,46 +1,90 @@
-body {
-    background-color: #b4daa7;
-    padding-top: 2%;
-    width: 100vw;
-    height: auto;
+:host {
+    display: block;
+    padding: 50px 0;
+    position: relative;
+    background-color: transparent;
+    /* Ensure base color */
 }
 
-p {
+/* Background Gradients */
+:host::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, var(--accent-color) 0%, transparent 50%);
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.section-title {
     text-align: center;
-    font-family: "Allura";
-    color: #4a785e;
-    font-size: 370%;
-    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: inherit;
+    position: relative;
+    z-index: 1;
 }
 
 .scroll-container {
-    background-color: #4a785e;
-    overflow: auto;
+    background-color: var(--accent-color);
+    background-image: linear-gradient(to right, var(--accent-color), var(--primary-color));
+    opacity: 0.9;
+    overflow-x: auto;
     white-space: nowrap;
-    padding: 1%;
+    padding: 30px 20px;
+    border-top: 1px solid var(--card-border);
+    border-bottom: 1px solid var(--card-border);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+    z-index: 1;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
 }
 
 .scroll-container img {
-    padding: 0.5%;
-    width: 35%;
+    display: inline-block;
+    height: 300px;
+    width: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    background: #fff;
 }
 
-@media only screen and (max-width: 714px) {
+.scroll-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
     .scroll-container img {
-        padding: 0.5%;
-        width: 75%;
-    }
-
-    p {
-        padding-top: 6%;
-        font-size: 300%;
+        height: 200px;
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 425px) {
+    .scroll-container {
+        padding: 20px 10px;
+    }
 
-    p {
-        padding-top: 6%;
-        font-size: 280%;
+    .scroll-container img {
+        height: 180px;
+        margin-right: 15px;
     }
 }
