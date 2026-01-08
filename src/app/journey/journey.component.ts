@@ -16,31 +16,10 @@ interface TimelineItem {
 export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
   educationData: TimelineItem[] = [
     {
-      title: 'Academic Tutor',
-      subtitle: 'CMS Online Academy',
-      duration: 'Jan 2022 - June 2025 (3 Years)',
-      description: 'Mentored middle-school students in advanced Python, data structures, and algorithmic problem-solving, with a focus on efficient coding and competitive programming fundamentals.',
-      category: 'experience'
-    },
-    {
-      title: 'Data Analyst Intern',
-      subtitle: 'Techvolt Software - Coimbatore',
-      duration: 'Feb 2023 - Apr 2023 (3 Months)',
-      description: 'Worked with real-world datasets to perform data cleaning, exploratory analysis, and statistical visualization using Python, translating raw data into actionable insights.',
-      category: 'experience'
-    },
-    {
-      title: 'Software Developer Intern',
-      subtitle: 'Omega Binaries',
-      duration: 'Apr 2023 - May 2023 (2 Months)',
-      description: 'Built a secure biometric authentication system using Java Swing and backend database integration, enabling fingerprint-based user registration and login workflows.',
-      category: 'experience'
-    },
-    {
-      title: 'Machine Learning Intern',
-      subtitle: 'Techvold Software - Coimbatore',
-      duration: 'Oct 2023 - Nov 2023 (2 Months)',
-      description: 'Applied end-to-end machine learning workflows—data preprocessing, model development, tuning, and evaluation—across diverse real-world datasets to deliver reliable predictive insights.',
+      title: 'AI/ML Research & Developer Intern',
+      subtitle: 'Raven AI - New York',
+      duration: 'Jul 2025 - Dec 2025 (6 Months)',
+      description: 'Built and deployed NLP-driven behavioral scoring systems using LLMs to evaluate medical communication at scale, improving alignment with expert assessments and enabling more empathetic clinical training.',
       category: 'experience'
     },
     {
@@ -51,10 +30,31 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
       category: 'experience'
     },
     {
-      title: 'AI/ML Research & Developer Intern',
-      subtitle: 'Raven AI - New York',
-      duration: 'Jul 2025 - Dec 2025 (6 Months)',
-      description: 'Built and deployed NLP-driven behavioral scoring systems using LLMs to evaluate medical communication at scale, improving alignment with expert assessments and enabling more empathetic clinical training.',
+      title: 'Machine Learning Intern',
+      subtitle: 'Techvold Software - Coimbatore',
+      duration: 'Oct 2023 - Nov 2023 (2 Months)',
+      description: 'Applied end-to-end machine learning workflows—data preprocessing, model development, tuning, and evaluation—across diverse real-world datasets to deliver reliable predictive insights.',
+      category: 'experience'
+    },
+    {
+      title: 'Software Developer Intern',
+      subtitle: 'Omega Binaries',
+      duration: 'Apr 2023 - May 2023 (2 Months)',
+      description: 'Built a secure biometric authentication system using Java Swing and backend database integration, enabling fingerprint-based user registration and login workflows.',
+      category: 'experience'
+    },
+    {
+      title: 'Data Analyst Intern',
+      subtitle: 'Techvolt Software - Coimbatore',
+      duration: 'Feb 2023 - Apr 2023 (3 Months)',
+      description: 'Worked with real-world datasets to perform data cleaning, exploratory analysis, and statistical visualization using Python, translating raw data into actionable insights.',
+      category: 'experience'
+    },
+    {
+      title: 'Academic Tutor',
+      subtitle: 'CMS Online Academy',
+      duration: 'Jan 2022 - June 2025 (3 Years)',
+      description: 'Mentored middle-school students in advanced Python, data structures, and algorithmic problem-solving, with a focus on efficient coding and competitive programming fundamentals.',
       category: 'experience'
     }
   ];

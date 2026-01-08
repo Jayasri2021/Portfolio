@@ -17,19 +17,7 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Background Gradients */
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, var(--accent-color) 0%, transparent 50%);
-  opacity: 0.1;
-  z-index: 0;
-  pointer-events: none;
-}
+/* Background Gradients removed */
 
 .hero__container {
   width: 100%;
@@ -169,23 +157,7 @@
   position: relative;
 }
 
-/* The Reveal Overlay */
-.avatar::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--card-bg);
-  /* Starts as blank card color */
-  z-index: 10;
-  transform: translateY(0);
-  /* Start covering */
-  /* Border top for scanning effect going up */
-  border-top: 4px solid var(--primary-color);
-}
-
+/* The Reveal Overlay removed */
 .shimmer {
   position: absolute;
   top: 0;
@@ -201,19 +173,7 @@
   pointer-events: none;
 }
 
-/* Animation trigger class */
-.avatar.animate-reveal::after {
-  animation: swipeReveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) 0.1s forwards;
-}
-
-.avatar.animate-reveal .shimmer {
-  animation: lightSweep 3s infinite 2s;
-}
-
-.avatar.animate-reveal img {
-  animation: zoomOut 1.5s ease-out forwards;
-}
-
+/* Animation trigger classes removed */
 @keyframes swipeReveal {
   0% {
     transform: translateY(0);
@@ -253,27 +213,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.1);
-  /* initially zoomed in */
+  transform: scale(1);
+  /* zoom removed */
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
 }
 
-/* Blobs behind avatar for effect */
-.avatar::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  width: 100px;
-  height: 100px;
-  background: var(--accent-color);
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0.5;
-  filter: blur(20px);
-}
+/* Blobs behind avatar removed */
 
 @media (max-width: 900px) {
   .hero {

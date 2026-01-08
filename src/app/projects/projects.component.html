@@ -5,33 +5,21 @@
       <div id="proj" *ngFor="let proj of projects">
         <a [href]="proj.link" target="_blank">
           <div class="media-wrapper">
-            <!-- Automatic Slideshow of images -->
-            <ng-container *ngIf="proj.images && proj.images.length > 0">
-              <div class="slideshow-container">
-                <img *ngFor="let img of proj.images; let i = index" [src]="img" [alt]="proj.title"
-                  [class.active]="i === proj.currentImageIndex" [class.prev]="i === proj.prevImageIndex"
-                  class="slide-img" />
-              </div>
-            </ng-container>
-
-            <!-- Video/Gif fallback if no images array -->
-            <ng-container *ngIf="!proj.images || proj.images.length === 0">
-              <video *ngIf="proj.video && (proj.video.endsWith('.mp4') || proj.video.endsWith('.webm'))"
-                [src]="proj.video" autoplay loop muted playsinline></video>
-              <img *ngIf="proj.video && !proj.video.endsWith('.mp4') && !proj.video.endsWith('.webm')"
-                [src]="proj.video" [alt]="proj.title" />
-            </ng-container>
+            <img *ngIf="proj.image" [src]="proj.image" [alt]="proj.title" class="static-img" />
           </div>
           <div class="content-wrapper">
             <h3>{{ proj.title }}</h3>
-            <p>{{ proj.description }}</p>
+            <div class="project-info">
+              <p><strong></strong> {{ proj.useCase }}</p>
+              <p><strong>Tech Stack:</strong> {{ proj.techStack }}</p>
+            </div>
           </div>
         </a>
       </div>
     </div>
     <div id="other-proj">
       <button (click)="viewOtherProj()">
-        Other Python Projects! <img src="../../assets/Link-Icon.svg" alt="Link" />
+        Other Projects! <img src="../../assets/Link-Icon.svg" alt="Link" />
       </button>
     </div>
   </div>

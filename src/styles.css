@@ -1,51 +1,53 @@
 /* Global Styles & Theme Variables */
 :root {
   --bg-color: #f8f9fa;
-  --text-color: #212529;
-  --text-muted: #6c757d;
-  --primary-color: #0d6efd;
-  --secondary-color: #6c757d;
-  --accent-color: #6610f2;
+  --text-color: #0f172a;
+  --text-muted: #475569;
+  --primary-color: #1e40af;
+  /* Professional Navy Blue */
+  --secondary-color: #64748b;
+  --accent-color: #334155;
+  /* Slate */
   --card-bg: #ffffff;
-  --card-border: #dee2e6;
+  --card-border: #e2e8f0;
   --nav-bg: rgba(255, 255, 255, 0.9);
-  --timeline-line: #dee2e6;
-  --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
-  --shadow-md: 0 .5rem 1rem rgba(0, 0, 0, .15);
-  --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --timeline-line: #cbd5e1;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --font-main: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --icon-invert: 0;
 
   /* Motif Background Variables - Light Theme */
-  --motif-base: linear-gradient(135deg, #f0f4ff 0%, #e6e9ff 50%, #f0f9ff 100%);
-  --motif-opacity: 0.65;
-  --motif-color-1: #4f46e5;
-  --motif-color-2: #0ea5e9;
-  --motif-glow-opacity: 0.25;
-  /* Increased for light theme depth */
+  --motif-base: #f1f5f9;
+  --motif-opacity: 1;
+  --motif-color-1: #1e40af;
+  --motif-color-2: #3b82f6;
+  --motif-glow-opacity: 0.05;
 }
 
 [data-theme="dark"] {
   --bg-color: #0f172a;
-  --text-color: #f1f5f9;
+  --text-color: #f8fafc;
   --text-muted: #94a3b8;
-  --primary-color: #38bdf8;
-  --secondary-color: #94a3b8;
-  --accent-color: #818cf8;
+  --primary-color: #60a5fa;
+  /* Professional Steel Blue */
+  --secondary-color: #64748b;
+  --accent-color: #94a3b8;
   --card-bg: #1e293b;
   --card-border: #334155;
-  --nav-bg: rgba(15, 23, 42, 0.7);
+  --nav-bg: rgba(15, 23, 42, 0.8);
   --timeline-line: #334155;
-  --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .5);
-  --shadow-md: 0 .5rem 1rem rgba(0, 0, 0, .75);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
   --icon-invert: 1;
 
   /* Motif Background Variables - Dark Theme */
-  --motif-base: linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%);
-  --motif-opacity: 0.25;
-  --motif-color-1: #818cf8;
-  --motif-color-2: #22d3ee;
-  --motif-glow-opacity: 0.12;
+  --motif-base: #020617;
+  --motif-opacity: 1;
+  --motif-color-1: #1e40af;
+  --motif-color-2: #3b82f6;
+  --motif-glow-opacity: 0.08;
 }
 
 * {
@@ -116,53 +118,21 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 100%;
   height: 100%;
-  /* Increased stroke width to 2.5 and higher opacities for light theme */
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke-width='2.5'%3E%3Cpath stroke='%234f46e5' d='M0 300 Q 250 200 500 300 T 1000 300' stroke-opacity='0.8' /%3E%3Cpath stroke='%230ea5e9' d='M0 330 Q 250 430 500 330 T 1000 330' stroke-opacity='0.7' /%3E%3Cpath stroke='%234f46e5' d='M0 270 Q 250 170 500 270 T 1000 270' stroke-opacity='0.6' /%3E%3Ccircle cx='250' cy='270' r='2' fill='%234f46e5' /%3E%3Ccircle cx='750' cy='330' r='2' fill='%230ea5e9' /%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-size: 50% 100%;
   opacity: var(--motif-opacity);
-  animation: dataFlow 40s linear infinite;
   pointer-events: none;
 }
 
 [data-theme="dark"] .motif-bg::before {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke-width='2'%3E%3Cpath stroke='%23818cf8' d='M0 300 Q 250 200 500 300 T 1000 300' stroke-opacity='0.6' /%3E%3Cpath stroke='%2322d3ee' d='M0 330 Q 250 430 500 330 T 1000 330' stroke-opacity='0.5' /%3E%3Cpath stroke='%23818cf8' d='M0 270 Q 250 170 500 270 T 1000 270' stroke-opacity='0.4' /%3E%3Ccircle cx='100' cy='280' r='2' fill='white'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='3s' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='400' cy='320' r='2' fill='white'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='4s' repeatCount='indefinite' /%3E%3C/circle%3E%3Ccircle cx='800' cy='290' r='2' fill='white'%3E%3Canimate attributeName='opacity' values='0;1;0' dur='5s' repeatCount='indefinite' /%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
-}
-
-@keyframes dataFlow {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
+  background-image: none;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Common gradient class for sections if needed, or apply to specific components */
-.gradient-bg {
-  position: relative;
-  overflow: hidden;
-}
-
-.gradient-bg::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, var(--accent-color) 0%, transparent 50%);
-  opacity: 0.1;
-  z-index: 0;
-  pointer-events: none;
-}
+/* Common gradient class removed */
 
 a {
   color: var(--primary-color);
