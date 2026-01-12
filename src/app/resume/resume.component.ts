@@ -7,6 +7,8 @@ interface TimelineItem {
   description: string;
   icon?: string; // path to image or icon class
   category: 'education' | 'experience' | 'certification';
+  link?: string;
+  linkLabel?: string;
 }
 
 @Component({
@@ -18,17 +20,21 @@ export class ResumeComponent {
   timelineData: TimelineItem[] = [
     {
       title: 'Conference Presentation',
-      subtitle: 'Recognition of Impediments using IoT and ML',
+      subtitle: 'Recognition of Impediments using IoT and ML for Purblind People',
       description: 'Presented work on leveraging Machine Learning and IoT to identify and address obstacles faced by visually impaired individuals.',
       category: 'certification',
-      icon: '../../assets/walking-conf-certi.jpg'
+      icon: '../../assets/walking-conf-certi.jpg',
+      link: '../../assets/walking-conf-certi.jpg',
+      linkLabel: 'View Certification'
     },
     {
       title: 'IEEE Explorer HelmetGuard',
       subtitle: 'Project Innovation',
       description: 'Developed a smart helmet using IoT to elevate safety standards in high-risk environments. Integrated algorithms for real-time safety monitoring.',
       category: 'certification',
-      icon: '../../assets/helmet-conf-certi.png'
+      icon: '../../assets/helmet-conf-certi.png',
+      link: 'https://ieeexplore.ieee.org/document/10396925',
+      linkLabel: 'View Publication'
     }
   ];
 }

@@ -15,13 +15,12 @@ interface Project {
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
 
-
   projects: Project[] = [
     {
       title: 'Epileptic Seizure Classification',
-      useCase: 'Automates the detection and classification of epileptic seizures from EEG signals to assist clinicians in faster and more accurate diagnosis.',
-      techStack: 'Python, NumPy, SciPy, PyTorch / TensorFlow, Deep Learning (CNN, LSTM), Signal Processing, EEG Data Analysis',
-      image: '../../assets/seizure2-pic.jpg',
+      useCase: 'Developed a robust deep learning pipeline using CNN and LSTM architectures to automate the detection of epileptic seizures from raw EEG signals. The system processes complex brainwave data to identify abnormal patterns with high precision, providing clinicians with a rapid diagnostic tool that reduces manual analysis time.',
+      techStack: 'Python, NumPy, SciPy, PyTorch, TensorFlow, CNN, LSTM, Signal Processing, EEG Data Analysis',
+      image: '../../assets/seizure1-pic.jpg',
       link: 'https://github.com/Jayasri2021/Epileptic-Seizure-Classification'
     },
     // {
@@ -33,7 +32,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     // },
     {
       title: 'CampusCrew – Centralized Service Platform',
-      useCase: 'A centralized web platform for managing campus services such as requests, approvals, and service listings.',
+      useCase: 'Engineered a comprehensive full-stack service management portal aimed at streamlining campus operations. The platform facilitates digitized request workflows, automated approval cycles, and organized service listings with real-time tracking for administrators and students.',
       techStack: 'React, REST APIs, Flask API, Supabase, Cypress, PyTest',
       image: '../../assets/campuscrew-pic.gif',
       link: 'https://github.com/Jayasri2021/CampusCrew'
@@ -47,33 +46,30 @@ export class ProjectsComponent implements OnInit, OnDestroy {
     // },
     {
       title: 'Context-Aware Bias Detection and Controlled Text Rewriting for Fairer News Media',
-      useCase: 'Detects political and contextual bias in news articles and rewrites biased content into more neutral versions.',
-      techStack: 'Python, Transformers (BERT, RoBERTa, T5/BART), NLP, Hugging Face, SHAP, LIME, Deep Learning',
+      useCase: 'Designed an advanced NLP system utilizing Transformer models to identify political and contextual biases in news media. The system implements controlled text rewriting to mitigate bias while preserving factual integrity, leveraging explainable AI (SHAP, LIME) for transparency.',
+      techStack: 'Python, Transformers, BERT, RoBERTa, T5/BART, NLP, Hugging Face, SHAP, LIME, Deep Learning',
       image: '../../assets/bias-pic2.jpg',
       link: 'https://github.com/Jayasri2021/EAI_News_Media_Bias'
     },
     {
       title: 'Adaptive Learning Management System',
-      useCase: 'A learning management system that tracks student progress, manages course content, and provides analytics to support adaptive learning.',
+      useCase: 'Created an intelligent LMS designed to personalize the educational journey by tracking student performance and engagement. The system dynamically adapts course content delivery and provide educators with actionable insights through a data-driven analytics dashboard.',
       techStack: 'React, Next.js, PostgreSQL, REST APIs, ORM',
-      image:
-        '../../assets/adaptive-learning-pic.jpg',
+      image: '../../assets/adaptive-learning-pic.jpg',
       link: 'https://github.com/Jayasri2021/lms_project'
     },
     {
       title: 'Mood Tunes',
-      useCase: 'A web application that recommends music based on user mood and preferences.',
+      useCase: 'Developed an interactive web application that leverages machine learning to curate personalized music experiences. By analyzing user-inputted moods or emotional cues, the app recommends tracks that resonate with the user’s current state through smart recommendation algorithms.',
       techStack: 'React, Nest.js, REST APIs, Logistic Regression, PostgreSQL',
-      image:
-        '../../assets/moodtunes-pic.jpg',
-      link: 'https://moodtunes-423d2.web.app/'
+      image: '../../assets/moodtunes-pic.jpg',
+      link: 'https://github.com/Jayasri2021/Music-Playlist-Generation-model'
     },
     {
       title: 'Gesture2Globe',
-      useCase: 'Recognizes American Sign Language (ASL) gestures using computer vision to assist communication for the hearing-impaired.',
-      techStack: 'Python, OpenCV, MediaPipe, Deep Learning, Computer Vision, Gesture Recognition, React',
-      image:
-        '../../assets/gesture2globe-pic2.jpg',
+      useCase: 'Built a real-time computer vision system to bridge communication gaps for the hearing-impaired. Using OpenCV and MediaPipe, the application captures and translates American Sign Language (ASL) gestures into text with high accuracy under varying environmental conditions.',
+      techStack: 'Python, OpenCV, MediaPipe, Deep Learning, Computer Vision, Gesture Recognition, React, Vue.js',
+      image: '../../assets/gesture2globe-pic2.jpg',
       link: 'https://github.com/Jayasri2021/Gesture2Globe-ASL-Sign-Detection'
     }
   ];

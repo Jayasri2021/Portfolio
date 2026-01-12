@@ -113,4 +113,32 @@
     font-size: 0.9rem;
     color: var(--text-color);
     line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid var(--card-border);
+}
+
+.publication-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.publication-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.publication-link:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
 }

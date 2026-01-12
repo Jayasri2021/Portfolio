@@ -24,7 +24,7 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       title: 'Technical Support Engineer',
-      subtitle: 'Purdue University',
+      subtitle: 'Purdue University - Fort Wayne',
       duration: 'Dec 2024 - May 2026 (1.5 Years)',
       description: 'Provided hands-on IT support for classroom and campus systems, including device configuration, network setup, and real-time troubleshooting to ensure uninterrupted academic operations.',
       category: 'experience'
@@ -38,7 +38,7 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       title: 'Software Developer Intern',
-      subtitle: 'Omega Binaries',
+      subtitle: 'Omega Binaries - Chennai',
       duration: 'Apr 2023 - May 2023 (2 Months)',
       description: 'Built a secure biometric authentication system using Java Swing and backend database integration, enabling fingerprint-based user registration and login workflows.',
       category: 'experience'
