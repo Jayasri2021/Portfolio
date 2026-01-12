@@ -21,7 +21,7 @@ export class ResumeComponent {
     {
       title: 'Conference Presentation',
       subtitle: 'Recognition of Impediments using IoT and ML for Purblind People',
-      description: 'Presented work on leveraging Machine Learning and IoT to identify and address obstacles faced by visually impaired individuals.',
+      description: 'Presented work on Computational Intelligence and Communication Networks - e Machine Learning and IoT to identify and address obstacles faced by visually impaired individuals.',
       category: 'certification',
       icon: '../../assets/walking-conf-certi.jpg',
       link: '../../assets/walking-conf-certi.jpg',
