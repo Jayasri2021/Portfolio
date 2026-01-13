@@ -29,7 +29,7 @@ import { JourneyComponent } from './journey/journey.component';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  exports:[
+  exports: [
     ProjectsComponent
   ],
   providers: [],

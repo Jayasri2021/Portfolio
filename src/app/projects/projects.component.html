@@ -1,8 +1,17 @@
 <div class="projects-section">
   <h2 class="section-title">Projects</h2>
+
+  <!-- Filter Tabs -->
+  <div class="filter-container">
+    <button *ngFor="let filter of filters" (click)="filterProjects(filter)" [class.active]="currentFilter === filter"
+      class="filter-btn">
+      {{ filter }}
+    </button>
+  </div>
+
   <div class="parent">
     <div class="projects-list">
-      <div class="project-card" *ngFor="let proj of projects; let i = index" [class.reverse]="i % 2 !== 0">
+      <div class="project-card" *ngFor="let proj of filteredProjects; let i = index" [class.reverse]="i % 2 !== 0">
         <!-- Project Visual -->
         <div class="project-visual">
           <div class="image-container">
@@ -19,7 +28,12 @@
         <!-- Project Info -->
         <div class="project-info">
           <div class="project-header">
-            <span class="project-num">0{{ i + 1 }}</span>
+            <div class="project-meta">
+              <span class="project-num">0{{ i + 1 }}</span>
+              <div class="category-tags">
+                <span class="category-tag" *ngFor="let type of proj.types">{{ type }}</span>
+              </div>
+            </div>
             <h3 class="project-title">{{ proj.title }}</h3>
           </div>
 
@@ -49,10 +63,15 @@
           </div>
         </div>
       </div>
+
+      <!-- No projects message -->
+      <div *ngIf="filteredProjects.length === 0" class="no-projects">
+        <p>No projects found in this category yet. Check back soon!</p>
+      </div>
     </div>
 
     <!-- More Projects Button -->
-    <div id="other-proj">
+    <div id="other-proj" *ngIf="currentFilter === 'All'">
       <button (click)="viewOtherProj()" class="btn btn-primary">
         See All Projects <img src="../../assets/Link-Icon.svg" alt="Link" />
       </button>

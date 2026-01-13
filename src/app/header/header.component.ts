@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const sections = ['home', 'journey', 'skills', 'projects', 'certifications', 'experience'];
+    const sections = ['home', 'projects', 'journey', 'skills', 'experience', 'certifications'];
     const threshold = 120; // Increased threshold for earlier detection
 
     for (const sectionId of sections) {

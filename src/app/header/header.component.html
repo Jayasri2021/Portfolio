@@ -5,14 +5,14 @@
     </div>
 
     <nav class="nav-desktop">
-      <!-- <a [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Home</a> -->
-      <a [class.active]="activeSection === 'journey'" (click)="scrollToSection('journey')">Journey</a>
-
-      <a [class.active]="activeSection === 'skills'" (click)="scrollToSection('skills')">Skills</a>
+      <a [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Home</a>
       <a [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')">Projects</a>
+      <a [class.active]="activeSection === 'journey'" (click)="scrollToSection('journey')">Journey</a>
+      <a [class.active]="activeSection === 'skills'" (click)="scrollToSection('skills')">Skills</a>
+      <a [class.active]="activeSection === 'experience'" (click)="scrollToSection('experience')">Publications</a>
       <a [class.active]="activeSection === 'certifications'"
         (click)="scrollToSection('certifications')">Certifications</a>
-      <a [class.active]="activeSection === 'experience'" (click)="scrollToSection('experience')">Publications</a>
+      <!-- <a [class.active]="activeSection === 'contact'" (click)="scrollToSection('contact')">Contact</a> -->
     </nav>
 
     <div class="header-actions">
@@ -52,11 +52,12 @@
   <div class="mobile-menu" [class.open]="isMenuOpen">
     <button class="close-btn" (click)="toggleMenu()">&times;</button>
     <a [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Home</a>
+    <a [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')">Projects</a>
     <a [class.active]="activeSection === 'journey'" (click)="scrollToSection('journey')">Journey</a>
     <a [class.active]="activeSection === 'skills'" (click)="scrollToSection('skills')">Skills</a>
-    <a [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')">Projects</a>
+    <a [class.active]="activeSection === 'experience'" (click)="scrollToSection('experience')">Publications</a>
     <a [class.active]="activeSection === 'certifications'"
       (click)="scrollToSection('certifications')">Certifications</a>
-    <a [class.active]="activeSection === 'experience'" (click)="scrollToSection('experience')">Publications</a>
+    <a [class.active]="activeSection === 'contact'" (click)="scrollToSection('contact')">Contact</a>
   </div>
 </header>
