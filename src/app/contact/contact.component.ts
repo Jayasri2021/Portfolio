@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  scrollToSection(id: string) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  viewResume() {
+    const resumeUrl = '../../assets/Resume.pdf';
+    window.open(resumeUrl, '_blank');
+  }
 }

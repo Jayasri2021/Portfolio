@@ -1,19 +1,237 @@
-* {
-    margin: 0;
-    padding: 0;
+/* Global Styles & Theme Variables */
+:root {
+  --bg-color: #f8f9fa;
+  --text-color: #0f172a;
+  --text-muted: #475569;
+  --primary-color: #1e40af;
+  /* Professional Navy Blue */
+  --secondary-color: #64748b;
+  --accent-color: #334155;
+  /* Slate */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --timeline-line: #cbd5e1;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --font-main: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --icon-invert: 0;
 
-
+  /* Motif Background Variables - Light Theme */
+  --motif-base: #f1f5f9;
+  --motif-opacity: 1;
+  --motif-color-1: #1e40af;
+  --motif-color-2: #3b82f6;
+  --motif-glow-opacity: 0.05;
 }
 
-/* @-ms-viewport {
-    width: device-width;
-}  */
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --text-muted: #94a3b8;
+  --primary-color: #60a5fa;
+  /* Professional Steel Blue */
+  --secondary-color: #64748b;
+  --accent-color: #94a3b8;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --nav-bg: rgba(15, 23, 42, 0.8);
+  --timeline-line: #334155;
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --icon-invert: 1;
 
-/* html, */
+  /* Motif Background Variables - Dark Theme */
+  --motif-base: #020617;
+  --motif-opacity: 1;
+  --motif-color-1: #1e40af;
+  --motif-color-2: #3b82f6;
+  --motif-glow-opacity: 0.08;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
 body {
-    /* height: 1000vh; */
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    background-color: #b4daa7;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#home,
+#journey,
+#skills,
+#projects,
+#certifications,
+#experience,
+#contact {
+  scroll-margin-top: 80px;
+  /* Header height (70px) + 10px buffer */
+}
+
+body {
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Global Motif Background Container */
+.motif-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: var(--motif-base);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.motif-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 30%, var(--motif-color-1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, var(--motif-color-2) 0%, transparent 40%);
+  opacity: var(--motif-glow-opacity);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.motif-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: var(--motif-opacity);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .motif-bg::before {
+  background-image: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Common gradient class removed */
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  /* Renamed logic: Primary class but styled as requested (ghost-like blue on hover) */
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
 }

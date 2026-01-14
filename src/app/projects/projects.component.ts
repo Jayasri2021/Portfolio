@@ -1,14 +1,88 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+
+interface Project {
+  title: string;
+  useCase: string;
+  techStack: string;
+  image?: string;
+  link: string;
+  types: string[];
+}
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent {
-  viewOtherProj() {
-    const resumeUrl = 'https://github.com/Jayasri2021?tab=repositories';
-      window.open(resumeUrl, '_blank');
+export class ProjectsComponent implements OnInit, OnDestroy {
+
+  projects: Project[] = [
+    {
+      title: 'Epileptic Seizure Classification',
+      useCase: 'Developed a robust deep learning pipeline using CNN and LSTM architectures to automate the detection of epileptic seizures from raw EEG signals. The system processes complex brainwave data to identify abnormal patterns with high precision, providing clinicians with a rapid diagnostic tool that reduces manual analysis time.',
+      techStack: 'Python, NumPy, SciPy, PyTorch, TensorFlow, CNN, LSTM, Signal Processing, EEG Data Analysis',
+      image: '../../assets/seizure1-pic.jpg',
+      link: 'https://github.com/Jayasri2021/Epileptic-Seizure-Classification',
+      types: ['ML / AI']
+    },
+    {
+      title: 'CampusCrew – Centralized Service Platform',
+      useCase: 'Engineered a comprehensive full-stack service management portal aimed at streamlining campus operations. The platform facilitates digitized request workflows, automated approval cycles, and organized service listings with real-time tracking for administrators and students.',
+      techStack: 'React, REST APIs, Flask API, Supabase, Cypress, PyTest',
+      image: '../../assets/campuscrew-pic.gif',
+      link: 'https://github.com/Jayasri2021/CampusCrew',
+      types: ['Full-Stack', 'Systems / Backend']
+    },
+    {
+      title: 'Adaptive Learning Management System',
+      useCase: 'Created an intelligent LMS designed to personalize the educational journey by tracking student performance and engagement. The system dynamically adapts course content delivery and provide educators with actionable insights through a data-driven analytics dashboard.',
+      techStack: 'React, Next.js, PostgreSQL, REST APIs, ORM',
+      image: '../../assets/adaptive-learning-pic.jpg',
+      link: 'https://github.com/Jayasri2021/lms_project',
+      types: ['Full-Stack']
+    },
+    {
+      title: 'Mood Tunes',
+      useCase: 'Developed an interactive web application that leverages machine learning to curate personalized music experiences. By analyzing user-inputted moods or emotional cues, the app recommends tracks that resonate with the user’s current state through smart recommendation algorithms.',
+      techStack: 'React, Nest.js, REST APIs, Logistic Regression, PostgreSQL',
+      image: '../../assets/moodtunes-pic.jpg',
+      link: 'https://github.com/Jayasri2021/Music-Playlist-Generation-model',
+      types: ['ML / AI', 'Full-Stack', 'Systems / Backend']
+    },
+    {
+      title: 'Gesture2Globe',
+      useCase: 'Built a real-time computer vision system to bridge communication gaps for the hearing-impaired. Using OpenCV and MediaPipe, the application captures and translates American Sign Language (ASL) gestures into text with high accuracy under varying environmental conditions.',
+      techStack: 'Python, OpenCV, MediaPipe, Deep Learning, Computer Vision, Gesture Recognition, React, Vue.js',
+      image: '../../assets/gesture2globe-pic2.jpg',
+      link: 'https://github.com/Jayasri2021/Gesture2Globe-ASL-Sign-Detection',
+      types: ['ML / AI']
     }
-  
+  ];
+
+  filteredProjects: Project[] = [];
+  currentFilter: string = 'All';
+  filters: string[] = ['All', 'ML / AI', 'Full-Stack', 'Systems / Backend'];
+
+  ngOnInit() {
+    this.filteredProjects = this.projects;
+  }
+
+  ngOnDestroy() {
+  }
+
+  filterProjects(filter: string) {
+    this.currentFilter = filter;
+    if (filter === 'All') {
+      this.filteredProjects = this.projects;
+    } else {
+      this.filteredProjects = this.projects.filter(p => p.types.includes(filter));
+    }
+  }
+
+  viewOtherProj() {
+    const url = 'https://github.com/Jayasri2021?tab=repositories';
+    window.open(url, '_blank');
+  }
 }
+
+

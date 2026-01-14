@@ -1,0 +1,4 @@
+/* Global background styles are in styles.css */
+:host {
+    display: block;
+}

@@ -1,45 +1,80 @@
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
-</head>
+<div class="projects-section">
+  <h2 class="section-title">Projects</h2>
 
-<body>
-  <p id="pro-logo">Projects</p>
+  <!-- Filter Tabs -->
+  <div class="filter-container">
+    <button *ngFor="let filter of filters" (click)="filterProjects(filter)" [class.active]="currentFilter === filter"
+      class="filter-btn">
+      {{ filter }}
+    </button>
+  </div>
+
   <div class="parent">
-    <div class="Main-pro">
-      <div id="proj">
-        <a href="https://github.com/Jayasri2021/Biometric-login">
-          <img src="../../assets/Biometric-proj.jpg" />
-          <p>
-            A biometric (Fingerprint) login page using JavaSwing and MySQL
-            Workbench, to provide high level security!
-          </p>
-        </a>
+    <div class="projects-list">
+      <div class="project-card" *ngFor="let proj of filteredProjects; let i = index" [class.reverse]="i % 2 !== 0">
+        <!-- Project Visual -->
+        <div class="project-visual">
+          <div class="image-container">
+            <img *ngIf="proj.image" [src]="proj.image" [alt]="proj.title" class="project-img" />
+            <div class="image-overlay">
+              <a [href]="proj.link" target="_blank" class="overlay-link">
+                <span>View Repository</span>
+                <img src="../../assets/Link-Icon.svg" alt="Link" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="project-info">
+          <div class="project-header">
+            <div class="project-meta">
+              <span class="project-num">0{{ i + 1 }}</span>
+              <div class="category-tags">
+                <span class="category-tag" *ngFor="let type of proj.types">{{ type }}</span>
+              </div>
+            </div>
+            <h3 class="project-title">{{ proj.title }}</h3>
+          </div>
+
+          <div class="project-details">
+            <div class="detail-group">
+              <h4 class="detail-label">Objective & Use Case</h4>
+              <p class="detail-text">{{ proj.useCase }}</p>
+            </div>
+
+            <div class="detail-group">
+              <h4 class="detail-label">Technologies Used</h4>
+              <div class="tech-tags">
+                <span class="tech-tag" *ngFor="let tech of proj.techStack.split(',')">{{ tech.trim() }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-footer">
+            <a [href]="proj.link" target="_blank" class="github-btn">
+              Explore on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="link-arrow">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
-      <div id="proj">
-        <a href="https://github.com/Jayasri2021/Data-Science">
-          <img src="../../assets/datascience-proj.jpg" />
-          <p>
-            Complete data analysis using packages like numpy, pandas,
-            matplotlib, scipy, seaborn, etc..
-          </p>
-        </a>
-      </div>
-      <div id="proj">
-        <a href="https://github.com/Jayasri2021/Machine-Learning">
-          <img src="../../assets/ml-proj.jpg" />
-          <p>
-            Heart Disease, Diabetes and other predictions using Machine-Learning
-            algorithms in Python!
-          </p>
-        </a>
+
+      <!-- No projects message -->
+      <div *ngIf="filteredProjects.length === 0" class="no-projects">
+        <p>No projects found in this category yet. Check back soon!</p>
       </div>
     </div>
-    <div id="other-proj">
-      <button (click)="viewOtherProj()">
-        Other Python Projects! <img src="../../assets/Link-Icon.svg" />
+
+    <!-- More Projects Button -->
+    <div id="other-proj" *ngIf="currentFilter === 'All'">
+      <button (click)="viewOtherProj()" class="btn btn-primary">
+        See All Projects <img src="../../assets/Link-Icon.svg" alt="Link" />
       </button>
     </div>
   </div>
-</body>
+</div>

@@ -1,0 +1,245 @@
+:host {
+    display: block;
+}
+
+.journey-section {
+    padding: 40px 0;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Gradients removed */
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    z-index: 1;
+}
+
+/* Background Line */
+.timeline-line-bg {
+    position: absolute;
+    width: 4px;
+    background-color: var(--timeline-line);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+    z-index: 0;
+}
+
+/* Progress Line (Fills up as we scroll) */
+.timeline-line-progress {
+    position: absolute;
+    width: 4px;
+    background-color: var(--accent-color);
+    top: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+    z-index: 0;
+    transition: height 0.3s ease;
+    max-height: 100%;
+}
+
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: transparent;
+    width: 50%;
+    box-sizing: border-box;
+    /* Initially hidden for animation */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation State */
+.timeline-item.animate-in {
+    opacity: 0.5;
+    /* Default dimmed state */
+    transform: translateY(0);
+}
+
+.timeline-item.animate-in.active {
+    opacity: 1;
+    /* Fully active state */
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+/* Dots */
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bg-color);
+    border: 4px solid var(--timeline-line);
+    top: 20px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.3s;
+    /* Hide dot initially too or keep it visible? User said "journey leaf ... appear only when scrolled" */
+    /* If the item is hidden, dot is hidden. */
+}
+
+.timeline-item.active .timeline-dot {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.timeline-item.left .timeline-dot {
+    right: -10px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -10px;
+}
+
+
+/* Content Card */
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--card-bg);
+    position: relative;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-item.active .timeline-content {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+}
+
+/* Arrows */
+.timeline-content::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    border: medium solid var(--card-bg);
+}
+
+.timeline-item.left .timeline-content::before {
+    right: -10px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--card-bg);
+}
+
+.timeline-item.right .timeline-content::before {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--card-bg) transparent transparent;
+}
+
+
+.timeline-date {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding: 2px 8px;
+    background: rgba(129, 140, 248, 0.1);
+    border-radius: 4px;
+}
+
+.timeline-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+.timeline-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.timeline-desc {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+
+    .timeline-line-bg,
+    .timeline-line-progress {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-item.left .timeline-dot,
+    .timeline-item.right .timeline-dot {
+        left: 21px;
+    }
+
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before {
+        left: -10px;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--card-bg) transparent transparent;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .timeline-item {
+        padding-left: 55px;
+        padding-right: 15px;
+    }
+
+    .timeline-line-bg,
+    .timeline-line-progress {
+        left: 21px;
+    }
+
+    .timeline-item.left .timeline-dot,
+    .timeline-item.right .timeline-dot {
+        left: 11px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .timeline-item {
+        padding-left: 45px;
+        padding-right: 10px;
+    }
+
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content {
+        padding: 15px 20px;
+    }
+}

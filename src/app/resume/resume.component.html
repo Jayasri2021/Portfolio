@@ -1,54 +1,35 @@
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
-</head>
+<section class="experience-section">
+  <div class="container">
+    <h2 class="section-title">Academic Research & Publications</h2>
 
-<body>
-  <p id="logo-exp">Experiences and Services</p>
-  <div class="exp-page">
-    <div id="exp">
-      <img id="expimg" src="../../assets/certificate-intern1.jpg" />
-      <p id="des">
-        18-days internship at Techvolt immersed me in data science. It gained me
-        hands-on experience in analysis and visualization of data. I honed
-        skills in preprocessing, feature engineering using popular libraries.
-        Collaborating with the team, I contributed to innovative solutions. This
-        experience fueled my passion for data science, motivating me to pursue
-        it further.
-      </p>
+    <div class="experience-grid">
+      <div class="experience-card" *ngFor="let item of timelineData">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-img-wrapper" *ngIf="item.icon">
+              <!-- Using object-fit contain/cover depending on image type -->
+              <img [src]="item.icon" alt="Experience Image">
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="card-date" *ngIf="item.duration">{{ item.duration }}</div>
+            <h3 class="card-title">{{ item.title }}</h3>
+            <h4 class="card-subtitle">{{ item.subtitle }}</h4>
+            <p class="card-desc">{{ item.description }}</p>
+            <div class="card-footer" *ngIf="item.link">
+              <a [href]="item.link" target="_blank" class="publication-link">
+                {{ item.linkLabel || 'View Document' }}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="exp">
-      <img id="expimg" src="../../assets/certificate-intern2.png" />
-      <p id="des">
-        During my 20-day internship at "Omega Binaries," I actively contributed
-        to the development of a biometric login system using Java Swing. I
-        gained valuable experience in crafting intuitive user interfaces and
-        integrating biometric authentication, elevating my skills in Java
-        programming and user-focused design. This opportunity honed my
-        understanding of secure and efficient login systems, setting a strong
-        foundation for my future endeavors in software development.
-      </p>
-    </div>
-    <div id="exp">
-      <img id="expimg" src="../../assets/certificate-intern3.png" />
-      <p id="des">
-        I instructed Python programming to diverse international students at CMS
-        IT Group for 3.5 years. Cultivated a dynamic learning environment,
-        tailoring teaching methodologies to meet varied cultural and educational
-        needs. Fostered strong understanding and enthusiasm for Python through
-        engaging lessons, enhancing students' proficiency and coding skills.
-      </p>
-    </div>
-    <!-- <div id="exp">
-      <img id="expimg" src="../../assets/certificate-intern3.png" />
-      <p id="des">
-        I had the chance to apply theoretical knowledge to solve practical
-        problems, gaining a deeper understanding of algorithms, data
-        preprocessing, model building, and evaluation. Throughout my internship,
-        I actively contributed to projects that involved data analysis, feature
-        engineering, and the development of predictive models.
-      </p>
-    </div> -->
   </div>
-</body>
+</section>

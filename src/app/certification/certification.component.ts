@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 interface Certificate {
   imageUrl: string;
@@ -10,5 +10,5 @@ interface Certificate {
   styleUrls: ['./certification.component.css']
 })
 export class CertificationComponent {
-  
+
 }
