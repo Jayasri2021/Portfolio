@@ -31,7 +31,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       techStack: 'React, REST APIs, Flask API, Supabase, Cypress, PyTest',
       image: '../../assets/campuscrew-pic.gif',
       link: 'https://github.com/Jayasri2021/CampusCrew',
-      types: ['Full-Stack', 'Systems / Backend']
+      types: ['Full-Stack']
     },
     {
       title: 'Adaptive Learning Management System',
@@ -47,7 +47,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       techStack: 'React, Nest.js, REST APIs, Logistic Regression, PostgreSQL',
       image: '../../assets/moodtunes-pic.jpg',
       link: 'https://github.com/Jayasri2021/Music-Playlist-Generation-model',
-      types: ['ML / AI', 'Full-Stack', 'Systems / Backend']
+      types: ['ML / AI', 'Full-Stack']
     },
     {
       title: 'Gesture2Globe',
@@ -56,12 +56,20 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       image: '../../assets/gesture2globe-pic2.jpg',
       link: 'https://github.com/Jayasri2021/Gesture2Globe-ASL-Sign-Detection',
       types: ['ML / AI']
+    },
+    {
+      title: 'LumenDocs - RAG Document Assistant',
+      useCase: 'Implemented a Retrieval-Augmented Generation (RAG) system that enhances document interaction through AI-driven question answering. By integrating vector databases and LLM, the assistant retrieves relevant information from large document sets to provide accurate and context-aware responses.',
+      techStack: 'Python, LangChain, LLM, FAISS Vector Databases, RAG, Document Processing',
+      image: '../../assets/lumendocs-pic.png',
+      link: 'https://github.com/Jayasri2021/Document_QA_RAG',
+      types: ['ML / AI']
     }
   ];
 
   filteredProjects: Project[] = [];
   currentFilter: string = 'All';
-  filters: string[] = ['All', 'ML / AI', 'Full-Stack', 'Systems / Backend'];
+  filters: string[] = ['All', 'ML / AI', 'Full-Stack'];
 
   ngOnInit() {
     this.filteredProjects = this.projects;

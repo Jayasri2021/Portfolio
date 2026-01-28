@@ -13,8 +13,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  viewResume() {
-    const resumeUrl = '../../assets/Resume.pdf';
+  viewResume1() {
+    const resumeUrl = '../../assets/Software_Engineer_Resume.pdf';
+    window.open(resumeUrl, '_blank');
+  }
+
+  viewResume2() {
+    const resumeUrl = '../../assets/AI_ML_Engineer_Resume.pdf';
     window.open(resumeUrl, '_blank');
   }
 
