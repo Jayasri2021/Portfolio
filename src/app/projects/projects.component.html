@@ -23,6 +23,12 @@
               </a>
             </div>
           </div>
+          <div class="visual-tech">
+            <h4 class="detail-label">Technologies Used</h4>
+            <div class="tech-tags">
+              <span class="tech-tag" *ngFor="let tech of proj.techStack.split(',')">{{ tech.trim() }}</span>
+            </div>
+          </div>
         </div>
 
         <!-- Project Info -->
@@ -41,13 +47,6 @@
             <div class="detail-group">
               <h4 class="detail-label">Objective & Use Case</h4>
               <p class="detail-text">{{ proj.useCase }}</p>
-            </div>
-
-            <div class="detail-group">
-              <h4 class="detail-label">Technologies Used</h4>
-              <div class="tech-tags">
-                <span class="tech-tag" *ngFor="let tech of proj.techStack.split(',')">{{ tech.trim() }}</span>
-              </div>
             </div>
           </div>
 

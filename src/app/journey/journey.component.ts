@@ -31,7 +31,7 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       title: 'Machine Learning Intern',
-      subtitle: 'Techvold Software - Coimbatore',
+      subtitle: 'TechVolt Software - Coimbatore',
       duration: 'Oct 2023 - Nov 2023 (2 Months)',
       description: 'Applied end-to-end machine learning workflows—data preprocessing, model development, tuning, and evaluation—across diverse real-world datasets to deliver reliable predictive insights.',
       category: 'experience'
