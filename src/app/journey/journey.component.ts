@@ -18,23 +18,23 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
     {
       title: 'AI/ML Research & Developer Intern',
       subtitle: 'Raven AI - New York',
-      duration: 'Jul 2025 - Dec 2025 (6 Months)',
+      duration: 'Jul 2025 - May 2026 (11 Months)',
       description: 'Built and deployed NLP-driven behavioral scoring systems using LLMs to evaluate medical communication at scale, improving alignment with expert assessments and enabling more empathetic clinical training.',
       category: 'experience'
     },
     {
-      title: 'Technical Support Engineer',
+      title: ' Lead Technical Support Engineer',
       subtitle: 'Purdue University - Fort Wayne',
       duration: 'Dec 2024 - May 2026 (1.5 Years)',
       description: 'Provided hands-on IT support for classroom and campus systems, including device configuration, network setup, and real-time troubleshooting to ensure uninterrupted academic operations.',
       category: 'experience'
     },
     {
-      title: 'Machine Learning Intern',
-      subtitle: 'TechVolt Software - Coimbatore',
-      duration: 'Oct 2023 - Nov 2023 (2 Months)',
-      description: 'Applied end-to-end machine learning workflows—data preprocessing, model development, tuning, and evaluation—across diverse real-world datasets to deliver reliable predictive insights.',
-      category: 'experience'
+      title: 'Masters of Science in CS',
+      subtitle: 'Purdue University',
+      duration: 'Aug 2024 - May 2026',
+      description: 'GPA: 3.9/4.0',
+      category: 'education'
     },
     {
       title: 'Software Developer Intern',
@@ -44,18 +44,32 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
       category: 'experience'
     },
     {
+      title: 'Machine Learning Intern',
+      subtitle: 'TechVolt Software - Coimbatore',
+      duration: 'Jun 2023 - Nov 2023 (6 Months)',
+      description: 'Applied end-to-end machine learning workflows—data preprocessing, model development, tuning, and evaluation—across diverse real-world datasets to deliver reliable predictive insights.',
+      category: 'experience'
+    },
+    {
       title: 'Data Analyst Intern',
       subtitle: 'Techvolt Software - Coimbatore',
-      duration: 'Feb 2023 - Apr 2023 (3 Months)',
+      duration: 'Feb 2023 - Jun 2023 (5 Months)',
       description: 'Worked with real-world datasets to perform data cleaning, exploratory analysis, and statistical visualization using Python, translating raw data into actionable insights.',
       category: 'experience'
     },
     {
-      title: 'Academic Tutor',
+      title: 'Applied Programming Facilitator',
       subtitle: 'CMS Online Academy',
       duration: 'Jan 2022 - June 2025 (3 Years)',
-      description: 'Mentored middle-school students in advanced Python, data structures, and algorithmic problem-solving, with a focus on efficient coding and competitive programming fundamentals.',
+      description: 'Taught Python, algorithms, debugging, and MySQL/database fundamentals to 100+ learners across programming sessions and project-based exercises.',
       category: 'experience'
+    },
+    {
+      title: 'Bachelore of Technology in IT',
+      subtitle: 'Anna University - Easwari Engineering College',
+      duration: 'Oct 2020 - May 2024',
+      description: 'GPA: 4.0/4.0',
+      category: 'education'
     }
   ];
 

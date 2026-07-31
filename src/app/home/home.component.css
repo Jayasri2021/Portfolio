@@ -3,11 +3,11 @@
 }
 
 .hero {
-  min-height: calc(100vh - 70px);
+  min-height: 640px;
   /* 70px is header height */
   display: flex;
   align-items: center;
-  padding: 80px 16px 20px 20px;
+  padding: 48px 16px 32px 20px;
   margin-top: 70px;
   /* Offset for fixed header */
   background: transparent;
@@ -25,7 +25,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 28px;
   align-items: center;
   z-index: 1;
 }
@@ -68,7 +68,7 @@
 }
 
 .hero__desc {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   line-height: 1.8;
   color: var(--text-color);
   max-width: 600px;
@@ -79,7 +79,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -224,7 +224,8 @@
 
 @media (max-width: 900px) {
   .hero {
-    padding-top: 100px;
+    min-height: auto;
+    padding-top: 72px;
   }
 
   .hero__container {

@@ -10,7 +10,7 @@
 
             <div class="timeline-item" *ngFor="let item of educationData; let i = index" #timelineItem
                 [class.active]="i <= activeIndex" [class.animate-in]="isVisible(i)" [class.left]="i % 2 === 0"
-                [class.right]="i % 2 !== 0">
+                [class.right]="i % 2 !== 0" [class.education]="item.category === 'education'">
 
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">

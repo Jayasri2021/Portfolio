@@ -5,14 +5,14 @@
 }
 
 .skills-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background: transparent;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
+    gap: 16px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -21,7 +21,7 @@
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 12px;
-    padding: 24px;
+    padding: 16px;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
 }
@@ -34,27 +34,27 @@
 
 .skills-category h3 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--primary-color);
     border-bottom: 1px solid var(--card-border);
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 }
 
 .skills-badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 7px;
 }
 
 .skill-badge {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
+    gap: 6px;
+    padding: 5px 10px;
     background: var(--bg-color);
     border: 1px solid var(--card-border);
     border-radius: 6px;
@@ -65,8 +65,8 @@
 }
 
 .skill-badge img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
     background-color: #ffffff;
     /* Contrast for dark logos */
@@ -87,6 +87,6 @@
     }
 
     .skills-section {
-        padding: 40px 16px;
+        padding: 32px 16px;
     }
 }

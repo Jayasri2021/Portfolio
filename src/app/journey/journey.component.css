@@ -3,7 +3,7 @@
 }
 
 .journey-section {
-    padding: 40px 0;
+    padding: 32px 0;
     background-color: transparent;
     position: relative;
     overflow: hidden;
@@ -15,7 +15,7 @@
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     z-index: 1;
 }
 
@@ -48,7 +48,7 @@
 
 
 .timeline-item {
-    padding: 10px 40px;
+    padding: 7px 30px;
     position: relative;
     background-color: transparent;
     width: 50%;
@@ -111,7 +111,7 @@
 
 /* Content Card */
 .timeline-content {
-    padding: 20px 30px;
+    padding: 14px 20px;
     background-color: var(--card-bg);
     position: relative;
     border-radius: 8px;
@@ -123,6 +123,30 @@
 .timeline-item.active .timeline-content {
     border-color: var(--accent-color);
     box-shadow: var(--shadow-md);
+}
+
+/* Education milestones */
+.timeline-item.education .timeline-content,
+.timeline-item.education.active .timeline-content {
+    background-color: #1e40af;
+    border-color: #3b82f6;
+}
+
+.timeline-item.education .timeline-title,
+.timeline-item.education .timeline-subtitle,
+.timeline-item.education .timeline-desc {
+    color: #ffffff;
+}
+
+.timeline-item.education .timeline-date {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+[data-theme="dark"] .timeline-item.education .timeline-content,
+[data-theme="dark"] .timeline-item.education.active .timeline-content {
+    background-color: #1d4ed8;
+    border-color: #60a5fa;
 }
 
 /* Arrows */
@@ -148,6 +172,22 @@
     border-color: transparent var(--card-bg) transparent transparent;
 }
 
+.timeline-item.education.left .timeline-content::before {
+    border-color: transparent transparent transparent #1e40af;
+}
+
+.timeline-item.education.right .timeline-content::before {
+    border-color: transparent #1e40af transparent transparent;
+}
+
+[data-theme="dark"] .timeline-item.education.left .timeline-content::before {
+    border-color: transparent transparent transparent #1d4ed8;
+}
+
+[data-theme="dark"] .timeline-item.education.right .timeline-content::before {
+    border-color: transparent #1d4ed8 transparent transparent;
+}
+
 
 .timeline-date {
     font-size: 0.85rem;
@@ -171,13 +211,13 @@
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-muted);
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .timeline-desc {
     font-size: 0.95rem;
     color: var(--text-color);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Responsive */
@@ -209,6 +249,16 @@
         left: -10px;
         border-width: 10px 10px 10px 0;
         border-color: transparent var(--card-bg) transparent transparent;
+    }
+
+    .timeline-item.education.left .timeline-content::before,
+    .timeline-item.education.right .timeline-content::before {
+        border-color: transparent #1e40af transparent transparent;
+    }
+
+    [data-theme="dark"] .timeline-item.education.left .timeline-content::before,
+    [data-theme="dark"] .timeline-item.education.right .timeline-content::before {
+        border-color: transparent #1d4ed8 transparent transparent;
     }
 }
 
