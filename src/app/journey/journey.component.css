@@ -6,7 +6,7 @@
     padding: 32px 0;
     background-color: transparent;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* Background Gradients removed */
@@ -15,7 +15,7 @@
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding-bottom: 1rem;
+    padding-bottom: 2.5rem;
     z-index: 1;
 }
 

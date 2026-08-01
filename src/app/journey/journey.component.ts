@@ -19,18 +19,25 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
       title: 'AI/ML Research & Developer Intern',
       subtitle: 'Raven AI - New York',
       duration: 'Jul 2025 - May 2026 (11 Months)',
-      description: 'Built and deployed NLP-driven behavioral scoring systems using LLMs to evaluate medical communication at scale, improving alignment with expert assessments and enabling more empathetic clinical training.',
+      description: 'Built Python-based evaluation pipelines transforming unstructured medical training dialogue into structured behavioral scores across 250+ conversational datasets. Benchmarked GPT-4o, Qwen3, and Llama using MAE, MSE, and R² metrics. Automated scoring and preprocessing workflows to reduce manual evaluation effort and improve iteration speed for prompt experimentation.',
       category: 'experience'
     },
     {
-      title: ' Lead Technical Support Engineer',
+      title: 'Lead Technical Support Engineer',
       subtitle: 'Purdue University - Fort Wayne',
-      duration: 'Dec 2024 - May 2026 (1.5 Years)',
-      description: 'Provided hands-on IT support for classroom and campus systems, including device configuration, network setup, and real-time troubleshooting to ensure uninterrupted academic operations.',
+      duration: 'Dec 2025 - May 2026 (5 Months)',
+      description: '',
       category: 'experience'
     },
     {
-      title: 'Masters of Science in CS',
+      title: 'Technical Support Engineer',
+      subtitle: 'Purdue University - Fort Wayne',
+      duration: 'Dec 2024 - Dec 2025 (1 Year)',
+      description: 'Resolved technical issues across OS, networking, authentication, hardware, and AV systems for 500+ daily users across classroom and lab environments. Re-imaged and configured 100+ systems, standardizing workstation setups. Documented 20+ recurring fixes and troubleshooting workflows to improve repeatability.',
+      category: 'experience'
+    },
+    {
+      title: 'Master of Science in Computer Science',
       subtitle: 'Purdue University',
       duration: 'Aug 2024 - May 2026',
       description: 'GPA: 3.9/4.0',
@@ -40,28 +47,28 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
       title: 'Software Developer Intern',
       subtitle: 'Omega Binaries - Chennai',
       duration: 'Apr 2023 - May 2023 (2 Months)',
-      description: 'Built a secure biometric authentication system using Java Swing and backend database integration, enabling fingerprint-based user registration and login workflows.',
+      description: 'Developed a biometric authentication system using Java Swing, MySQL, and MVC architecture with MFS100 fingerprint SDK integration. Implemented secure registration/login workflows with encrypted credential storage and role-based access control.',
       category: 'experience'
     },
     {
       title: 'Machine Learning Intern',
       subtitle: 'TechVolt Software - Coimbatore',
       duration: 'Jun 2023 - Nov 2023 (6 Months)',
-      description: 'Applied end-to-end machine learning workflows—data preprocessing, model development, tuning, and evaluation—across diverse real-world datasets to deliver reliable predictive insights.',
+      description: 'Engineered features and trained classical ML models (Logistic Regression, Naive Bayes, Decision Trees), achieving 85%+ predictive accuracy. Compared multiple models and selected the best-performing approach using cross-validation and hyperparameter tuning.',
       category: 'experience'
     },
     {
       title: 'Data Analyst Intern',
       subtitle: 'Techvolt Software - Coimbatore',
       duration: 'Feb 2023 - Jun 2023 (5 Months)',
-      description: 'Worked with real-world datasets to perform data cleaning, exploratory analysis, and statistical visualization using Python, translating raw data into actionable insights.',
+      description: 'Performed exploratory data analysis and data cleaning on 10,000+ records, improving data quality for downstream modeling. Optimized SQL queries and reporting workflows, reducing reporting latency by 45%. Built dashboards and structured summaries for stakeholder-facing analysis.',
       category: 'experience'
     },
     {
       title: 'Applied Programming Facilitator',
-      subtitle: 'CMS Online Academy',
+      subtitle: 'CMS Online Academy', 
       duration: 'Jan 2022 - June 2025 (3 Years)',
-      description: 'Taught Python, algorithms, debugging, and MySQL/database fundamentals to 100+ learners across programming sessions and project-based exercises.',
+      description: 'Taught Python, algorithms, debugging, and MySQL fundamentals to 100+ learners across programming sessions and project-based exercises. Mentored students through 30+ coding exercises and mini-projects. Created 25+ technical explanations and learning materials for beginner programming concepts.',
       category: 'experience'
     },
     {

@@ -14,12 +14,12 @@ export class HomeComponent implements OnInit {
   }
 
   viewResume1() {
-    const resumeUrl = '../../assets/Software_Engineer_Resume.pdf';
+    const resumeUrl = '../../assets/resume-papers/Software_Engineer_Resume.pdf';
     window.open(resumeUrl, '_blank');
   }
 
   viewResume2() {
-    const resumeUrl = '../../assets/AI_ML_Engineer_Resume.pdf';
+    const resumeUrl = '../../assets/resume-papers/AI_ML_Engineer_Resume.pdf';
     window.open(resumeUrl, '_blank');
   }
 
