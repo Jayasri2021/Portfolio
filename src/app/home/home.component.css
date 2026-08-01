@@ -3,11 +3,11 @@
 }
 
 .hero {
-  min-height: 640px;
+  min-height: 560px;
   /* 70px is header height */
   display: flex;
   align-items: center;
-  padding: 48px 16px 32px 20px;
+  padding: 32px 16px 24px 20px;
   margin-top: 70px;
   /* Offset for fixed header */
   background: transparent;
@@ -41,12 +41,12 @@
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   box-shadow: var(--shadow-sm);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .hero__title {
-  margin: 0 0 15px 0;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin: 0 0 10px 0;
+  font-size: clamp(2.25rem, 4.2vw, 3.4rem);
   line-height: 1.1;
   font-weight: 800;
   color: var(--text-color);
@@ -61,25 +61,25 @@
 }
 
 .hero__subtitle {
-  margin: 0 0 20px 0;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin: 0 0 14px 0;
+  font-size: clamp(1.1rem, 1.7vw, 1.3rem);
   font-weight: 600;
   color: var(--text-muted);
 }
 
 .hero__desc {
-  margin-bottom: 20px;
-  line-height: 1.8;
+  margin-bottom: 16px;
+  line-height: 1.65;
   color: var(--text-color);
   max-width: 600px;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .btn {
@@ -147,7 +147,7 @@
 }
 
 .avatar {
-  width: min(400px, 80vw);
+  width: min(360px, 80vw);
   aspect-ratio: 1;
   border-radius: 30px;
   overflow: hidden;
