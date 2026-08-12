@@ -218,7 +218,8 @@
 }
 
 .timeline-desc {
-    font-size: 0.95rem;
+    font-size: var(--description-font-size);
+    line-height: var(--description-line-height);
     color: var(--text-color);
     margin-bottom: 0.5rem;
 }

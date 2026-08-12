@@ -28,7 +28,7 @@ export class ResumeComponent {
       linkLabel: 'View Certification'
     },
     {
-      title: 'IEEE Explorer HelmetGuard',
+      title: 'IEEE Xplore - HelmetGuard',
       subtitle: 'HelmetGuard: IoT-Enabled Smart Helmet for Enhanced Safety',
       description: 'Developed a smart helmet using IoT to elevate safety standards in high-risk environments. Integrated algorithms for real-time safety monitoring.',
       category: 'certification',

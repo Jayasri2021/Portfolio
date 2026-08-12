@@ -1,17 +1,9 @@
 <div class="projects-section">
   <h2 class="section-title">Projects</h2>
 
-  <!-- Filter Tabs -->
-  <div class="filter-container">
-    <button *ngFor="let filter of filters" (click)="filterProjects(filter)" [class.active]="currentFilter === filter"
-      class="filter-btn">
-      {{ filter }}
-    </button>
-  </div>
-
   <div class="parent">
     <div class="projects-list">
-      <div class="project-card" *ngFor="let proj of filteredProjects; let i = index" [class.reverse]="i % 2 !== 0">
+      <div class="project-card" *ngFor="let proj of projects; let i = index" [class.reverse]="i % 2 !== 0">
         <!-- Project Visual -->
         <div class="project-visual">
           <div class="image-container">
@@ -23,12 +15,6 @@
               </a>
             </div>
           </div>
-          <div class="visual-tech">
-            <h4 class="detail-label">Technologies Used</h4>
-            <div class="tech-tags">
-              <span class="tech-tag" *ngFor="let tech of proj.techStack.split(',')">{{ tech.trim() }}</span>
-            </div>
-          </div>
         </div>
 
         <!-- Project Info -->
@@ -36,16 +22,13 @@
           <div class="project-header">
             <div class="project-meta">
               <span class="project-num">0{{ i + 1 }}</span>
-              <div class="category-tags">
-                <span class="category-tag" *ngFor="let type of proj.types">{{ type }}</span>
-              </div>
             </div>
             <h3 class="project-title">{{ proj.title }}</h3>
           </div>
 
           <div class="project-details">
             <div class="detail-group">
-              <h4 class="detail-label">Objective & Use Case</h4>
+              <!-- <h4 class="detail-label">Objective & Use Case</h4> -->
               <p class="detail-text">{{ proj.useCase }}</p>
             </div>
           </div>
@@ -53,16 +36,12 @@
         </div>
       </div>
 
-      <!-- No projects message -->
-      <div *ngIf="filteredProjects.length === 0" class="no-projects">
-        <p>No projects found in this category yet. Check back soon!</p>
-      </div>
     </div>
 
     <!-- More Projects Button -->
-    <div id="other-proj" *ngIf="currentFilter === 'All'">
+    <div id="other-proj">
       <button (click)="viewOtherProj()" class="btn btn-primary">
-        See All Projects <img src="../../assets/Link-Icon.svg" alt="Link" />
+        See All Git Projects <img src="../../assets/Link-Icon.svg" alt="Link" />
       </button>
     </div>
   </div>

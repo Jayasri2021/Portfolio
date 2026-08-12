@@ -110,9 +110,9 @@
 }
 
 .card-desc {
-    font-size: 0.9rem;
+    font-size: var(--description-font-size);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: var(--description-line-height);
     margin-bottom: 20px;
 }
 

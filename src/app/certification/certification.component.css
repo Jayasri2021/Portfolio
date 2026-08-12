@@ -46,9 +46,9 @@
 
 .cert-info p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: var(--description-font-size);
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: var(--description-line-height);
 }
 
 .cert-view-btn {

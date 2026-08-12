@@ -1,12 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 
 interface Project {
   title: string;
   useCase: string;
-  techStack: string;
   image?: string;
   link: string;
-  types: string[];
 }
 
 @Component({
@@ -14,99 +12,55 @@ interface Project {
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements OnInit, OnDestroy {
+export class ProjectsComponent {
 
   projects: Project[] = [
     {
       title: 'Time-Series Forecasting & Backtesting Pipeline',
-      useCase: 'Built an end-to-end forecasting pipeline using historical fuel pricing data,feature engineering, model evaluation, and rolling-window backtesting.',
-      techStack: 'Python, XGBoost, Scikit-Learn, Flask, ETL, PostgreSQL',
+      useCase: 'Designed an end-to-end forecasting pipeline using historical fuel pricing data, engineering lag features, rolling-window statistics, trend features, and seasonality features to improve forecast reliability. Evaluated baseline models and XGBoost using MAE, RMSE, and SMAPE across backtesting windows.',
       image: '../../assets/lumendocs-pic.png',
-      link: 'https://github.com/Jayasri2021/Forecasting_Backtesting_Pipeline',
-      types: ['ML / AI']
+      link: 'https://github.com/Jayasri2021/Forecasting_Backtesting_Pipeline'
     },
     {
       title: 'LumenDocs - RAG Document Assistant',
-      useCase: 'Implemented a Retrieval-Augmented Generation (RAG) system that enhances document interaction through AI-driven question answering. By integrating vector databases and LLM, the assistant retrieves relevant information from large document sets to provide accurate and context-aware responses.',
-      techStack: 'Python, LangChain, LLM, FAISS Vector Databases, RAG',
+      useCase: 'Built a Retrieval-Augmented Generation (RAG) pipeline using LangChain, FAISS, and FastAPI to query large PDFs and web documents. Implemented document ingestion, semantic chunking, embedding generation, vector search, retrieval logic, and grounded answer generation. Tested retrieval workflows across 50+ sample document queries to evaluate answer relevance and source grounding.',
       image: '../../assets/lumendocs-pic.png',
-      link: 'https://github.com/Jayasri2021/Document_QA_RAG',
-      types: ['ML / AI']
+      link: 'https://github.com/Jayasri2021/Document_QA_RAG'
     },
     {
       title: 'Gesture2Globe',
-      useCase: 'Built a real-time computer vision system to bridge communication gaps for the hearing-impaired. Using OpenCV and MediaPipe, the application captures and translates American Sign Language (ASL) gestures into text with high accuracy under varying environmental conditions.',
-      techStack: 'Python, Deep Learning, Computer Vision, Gesture Recognition, React',
+      useCase: 'Built a real-time computer vision system for ASL recognition and translation using MediaPipe hand-keypoint extraction and temporal modeling. Reduced inference latency by 50% through model and pipeline optimization, with backend inference workflows deployed via containerized architecture on Google Cloud Run.',
       image: '../../assets/gesture2globe-pic2.jpg',
-      link: 'https://github.com/Jayasri2021/Gesture2Globe-ASL-Sign-Detection',
-      types: ['ML / AI']
+      link: 'https://github.com/Jayasri2021/Gesture2Globe-ASL-Sign-Detection'
     },
     {
       title: 'MoodTunes',
-      useCase: 'Developed an interactive web application that leverages machine learning to curate personalized music experiences. By analyzing user-inputted moods or emotional cues, the app recommends tracks that resonate with the user’s current state through smart recommendation algorithms.',
-      techStack: 'React, Nest.js, REST APIs, Logistic Regression, PostgreSQL',
+      useCase: 'Built a mood-based music recommendation system using NLP-based emotion classification and Spotify playlist API integration. Classified free-text user input into multiple emotion categories and generated context-aware playlist recommendations, tested across 50+ sample user inputs.',
       image: '../../assets/moodtunes-pic.jpg',
-      link: 'https://github.com/Jayasri2021/Music-Playlist-Generation-model',
-      types: ['ML / AI', 'Full-Stack']
+      link: 'https://github.com/Jayasri2021/Music-Playlist-Generation-model'
     },
     {
       title: 'Adaptive Learning Management System',
-      useCase: 'Created an intelligent LMS designed to personalize the educational journey by tracking student performance and engagement. The system dynamically adapts course content delivery and provide educators with actionable insights through a data-driven analytics dashboard.',
-      techStack: 'React, Next.js, PostgreSQL, REST APIs, ORM',
+      useCase: 'Built a role-based LMS supporting 500+ users with authentication, quiz workflows, reporting, and analytics features. Optimized backend query retrieval time by 50% through database query and dashboard workflow improvements. Designed PostgreSQL-backed workflows to track users, courses, quiz outcomes, and performance metrics.',
       image: '../../assets/adaptive-learning-pic.jpg',
-      link: 'https://github.com/Jayasri2021/lms_project',
-      types: ['Full-Stack']
+      link: 'https://github.com/Jayasri2021/lms_project'
     },
     {
-      title: 'AuctionEase - Online Auction Platform',
-      useCase: 'Built a real-time auction platform for auction listing, live bidding, transactions, admin features and role-based access.',
-      techStack: 'Sprint Boot, Java, MySQL, REST APIs, ETL, React.js',
-      image: '../../assets/adaptive-learning-pic.jpg',
-      link: 'https://github.com/Jayasri2021/Auction-Ease-Project',
-      types: ['Full-Stack']
-    },
-    {
-      title: 'CampusCrew – Centralized Service Platform',
-      useCase: 'Engineered a comprehensive full-stack service management portal aimed at streamlining campus operations. The platform facilitates digitized request workflows, automated approval cycles, and organized service listings with real-time tracking for administrators and students.',
-      techStack: 'React, REST APIs, Flask API, Supabase, Cypress, PyTest',
+      title: 'CampusCrew - Centralized Service Platform',
+      useCase: 'Built a full-stack campus services platform using React, Flask, and Supabase, implementing service listings, discovery, and tutoring/event workflows with role-based access. Tested core workflows across 50+ sample users, listings, and service requests during development.',
       image: '../../assets/campuscrew-pic.gif',
-      link: 'https://github.com/Jayasri2021/CampusCrew',
-      types: ['Full-Stack']
+      link: 'https://github.com/Jayasri2021/CampusCrew'
     },
     {
       title: 'Epileptic Seizure Classification',
-      useCase: 'Developed a robust deep learning pipeline using CNN and LSTM architectures to automate the detection of epileptic seizures from raw EEG signals. The system processes complex brainwave data to identify abnormal patterns with high precision, providing clinicians with a rapid diagnostic tool that reduces manual analysis time.',
-      techStack: 'Python, SciPy, PyTorch, TensorFlow, CNN, LSTM',
+      useCase: 'Built a CNN/LSTM-based seizure classification model using EEG signal data and 2D signal transformations, achieving 92% classification accuracy. Applied wavelet transform, t-SNE visualization, and TensorFlow/Keras modeling, with evaluation workflows designed for biomedical signal reliability.',
       image: '../../assets/seizure1-pic.jpg',
-      link: 'https://github.com/Jayasri2021/Epileptic-Seizure-Classification',
-      types: ['ML / AI']
+      link: 'https://github.com/Jayasri2021/Epileptic-Seizure-Classification'
     }
   ];
-
-  filteredProjects: Project[] = [];
-  currentFilter: string = 'All';
-  filters: string[] = ['All', 'ML / AI', 'Full-Stack'];
-
-  ngOnInit() {
-    this.filteredProjects = this.projects;
-  }
-
-  ngOnDestroy() {
-  }
-
-  filterProjects(filter: string) {
-    this.currentFilter = filter;
-    if (filter === 'All') {
-      this.filteredProjects = this.projects;
-    } else {
-      this.filteredProjects = this.projects.filter(p => p.types.includes(filter));
-    }
-  }
 
   viewOtherProj() {
     const url = 'https://github.com/Jayasri2021?tab=repositories';
     window.open(url, '_blank');
   }
 }
-
-

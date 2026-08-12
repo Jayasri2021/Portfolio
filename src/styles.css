@@ -16,6 +16,8 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --font-main: 'Inter', 'Segoe UI', Roboto, sans-serif;
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --description-font-size: 0.9rem;
+  --description-line-height: 1.55;
   --icon-invert: 0;
 
   /* Motif Background Variables - Light Theme */

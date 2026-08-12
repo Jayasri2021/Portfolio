@@ -49,7 +49,8 @@
 }
 
 .footer-subtext {
-    font-size: 1.1rem;
+    font-size: var(--description-font-size);
+    line-height: var(--description-line-height);
     color: var(--text-muted);
     margin-bottom: 1rem;
     /* Reduced marginBottom */

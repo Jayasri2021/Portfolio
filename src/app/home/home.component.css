@@ -69,10 +69,10 @@
 
 .hero__desc {
   margin-bottom: 16px;
-  line-height: 1.65;
+  line-height: var(--description-line-height);
   color: var(--text-color);
   max-width: 600px;
-  font-size: 1rem;
+  font-size: var(--description-font-size);
 }
 
 .hero__actions {

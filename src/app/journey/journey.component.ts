@@ -17,7 +17,7 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
   educationData: TimelineItem[] = [
     {
       title: 'AI/ML Research & Developer Intern',
-      subtitle: 'Raven AI - New York',
+      subtitle: 'Raven AI — New York, NY',
       duration: 'Jul 2025 - May 2026 (11 Months)',
       description: 'Built Python-based evaluation pipelines transforming unstructured medical training dialogue into structured behavioral scores across 250+ conversational datasets. Benchmarked GPT-4o, Qwen3, and Llama using MAE, MSE, and R² metrics. Automated scoring and preprocessing workflows to reduce manual evaluation effort and improve iteration speed for prompt experimentation.',
       category: 'experience'
@@ -31,7 +31,7 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       title: 'Technical Support Engineer',
-      subtitle: 'Purdue University - Fort Wayne',
+      subtitle: 'Purdue University — Fort Wayne',
       duration: 'Dec 2024 - Dec 2025 (1 Year)',
       description: 'Resolved technical issues across OS, networking, authentication, hardware, and AV systems for 500+ daily users across classroom and lab environments. Re-imaged and configured 100+ systems, standardizing workstation setups. Documented 20+ recurring fixes and troubleshooting workflows to improve repeatability.',
       category: 'experience'
@@ -45,21 +45,21 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       title: 'Software Developer Intern',
-      subtitle: 'Omega Binaries - Chennai',
+      subtitle: 'Omega Binaries — Chennai',
       duration: 'Apr 2023 - May 2023 (2 Months)',
       description: 'Developed a biometric authentication system using Java Swing, MySQL, and MVC architecture with MFS100 fingerprint SDK integration. Implemented secure registration/login workflows with encrypted credential storage and role-based access control.',
       category: 'experience'
     },
     {
       title: 'Machine Learning Intern',
-      subtitle: 'TechVolt Software - Coimbatore',
+      subtitle: 'TechVolt Software — Coimbatore',
       duration: 'Jun 2023 - Nov 2023 (6 Months)',
       description: 'Engineered features and trained classical ML models (Logistic Regression, Naive Bayes, Decision Trees), achieving 85%+ predictive accuracy. Compared multiple models and selected the best-performing approach using cross-validation and hyperparameter tuning.',
       category: 'experience'
     },
     {
       title: 'Data Analyst Intern',
-      subtitle: 'Techvolt Software - Coimbatore',
+      subtitle: 'TechVolt Software — Coimbatore',
       duration: 'Feb 2023 - Jun 2023 (5 Months)',
       description: 'Performed exploratory data analysis and data cleaning on 10,000+ records, improving data quality for downstream modeling. Optimized SQL queries and reporting workflows, reducing reporting latency by 45%. Built dashboards and structured summaries for stakeholder-facing analysis.',
       category: 'experience'
@@ -72,8 +72,8 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
       category: 'experience'
     },
     {
-      title: 'Bachelore of Technology in IT',
-      subtitle: 'Anna University - Easwari Engineering College',
+      title: 'Bachelor of Technology in Information Technology',
+      subtitle: 'Anna University — Easwari Engineering College',
       duration: 'Oct 2020 - May 2024',
       description: 'GPA: 4.0/4.0',
       category: 'education'
