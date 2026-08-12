@@ -17,7 +17,10 @@
                     <div class="timeline-date">{{ item.duration }}</div>
                     <h3 class="timeline-title">{{ item.title }}</h3>
                     <h4 class="timeline-subtitle">{{ item.subtitle }}</h4>
-                    <p class="timeline-desc">{{ item.description }}</p>
+                    <ul class="timeline-points" *ngIf="item.category === 'experience'">
+                        <li *ngFor="let point of getWorkBullets(item.title)">{{ point }}</li>
+                    </ul>
+                    <p class="timeline-desc" *ngIf="item.category === 'education'">{{ item.description }}</p>
                 </div>
             </div>
         </div>

@@ -140,4 +140,40 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
   isVisible(index: number): boolean {
     return this.visibleItems.has(index);
   }
+
+  getWorkBullets(title: string): string[] {
+    const bullets: Record<string, string[]> = {
+      'Generative AI Specialist': [
+        'Build BetterSnapAI admin-dashboard workflows.',
+        'Develop AI image-generation features with Azure, Python, Supabase, and LoRA.',
+        'Improve operational analytics and GPU-cost efficiency.'
+      ],
+      'AI/ML Research & Developer Engineer': [
+        'Converted 250+ medical-training dialogues into behavioral scores.',
+        'Benchmarked GPT-4o, Qwen3, and Llama using MAE, MSE, and R².',
+        'Supported model selection and prompt optimization.'
+      ],
+      'Technical Support Engineer -> Lead Technical Support Engineer': [
+        'Supported 500+ daily users across campus IT systems.',
+        'Standardized more than 100 workstations.',
+        'Documented repeatable troubleshooting procedures.'
+      ],
+      'Software Engineer': [
+        'Built a biometric authentication system with Java Swing and MySQL.',
+        'Integrated the MFS100 fingerprint SDK using MVC architecture.',
+        'Implemented encrypted credentials and role-based access.'
+      ],
+      'Data Analyst -> Machine Learning Engineer': [
+        'Cleaned and analyzed more than 10,000 records.',
+        'Reduced SQL reporting time by 45% and built dashboards.',
+        'Developed ML models with 85%+ predictive accuracy.'
+      ],
+      'Applied Programming Facilitator': [
+        'Taught Python, algorithms, debugging, and MySQL to 100+ learners.',
+        'Led hands-on exercises and project-based mentoring.'
+      ]
+    };
+
+    return bullets[title] ?? [];
+  }
 }

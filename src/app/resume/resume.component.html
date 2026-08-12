@@ -15,7 +15,7 @@
             <div class="card-date" *ngIf="item.duration">{{ item.duration }}</div>
             <h3 class="card-title">{{ item.title }}</h3>
             <h4 class="card-subtitle">{{ item.subtitle }}</h4>
-            <p class="card-desc">{{ item.description }}</p>
+            <!-- <p class="card-desc">{{ item.description }}</p> -->
             <div class="card-footer" *ngIf="item.link">
               <a [href]="item.link" target="_blank" class="publication-link">
                 {{ item.linkLabel || 'View Document' }}

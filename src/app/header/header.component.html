@@ -1,10 +1,11 @@
 <header class="header">
   <div class="container header-content">
-    <div class="logo" (click)="scrollToSection('home')">
+    <button class="logo" type="button" (click)="scrollToSection('home')" aria-label="Go to Home">
       <span>Jsv</span>
-    </div>
+    </button>
 
-    <nav class="nav-desktop">
+    <nav class="nav-desktop" aria-label="Portfolio sections">
+      <span class="nav-progress" [style.width.%]="scrollProgress" aria-hidden="true"></span>
       <a [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Home</a>
       <a [class.active]="activeSection === 'journey'" (click)="scrollToSection('journey')">Journey</a>
       <a [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')">Projects</a>
@@ -12,7 +13,7 @@
       <a [class.active]="activeSection === 'experience'" (click)="scrollToSection('experience')">Publications</a>
       <a [class.active]="activeSection === 'certifications'"
         (click)="scrollToSection('certifications')">Certifications</a>
-      <!-- <a [class.active]="activeSection === 'contact'" (click)="scrollToSection('contact')">Contact</a> -->
+      <a [class.active]="activeSection === 'contact'" (click)="scrollToSection('contact')">Contact</a>
     </nav>
 
     <div class="header-actions">
@@ -50,7 +51,7 @@
 
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu" [class.open]="isMenuOpen">
-    <button class="close-btn" (click)="toggleMenu()">&times;</button>
+    <button class="close-btn" (click)="toggleMenu()" aria-label="Close menu">&times;</button>
     <a [class.active]="activeSection === 'home'" (click)="scrollToSection('home')">Home</a>
     <a [class.active]="activeSection === 'journey'" (click)="scrollToSection('journey')">Journey</a>
     <a [class.active]="activeSection === 'projects'" (click)="scrollToSection('projects')">Projects</a>
@@ -60,4 +61,5 @@
       (click)="scrollToSection('certifications')">Certifications</a>
     <a [class.active]="activeSection === 'contact'" (click)="scrollToSection('contact')">Contact</a>
   </div>
+  <div class="mobile-progress" [style.width.%]="scrollProgress" aria-hidden="true"></div>
 </header>

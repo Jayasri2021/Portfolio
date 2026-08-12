@@ -32,16 +32,70 @@
 
 .hero__badge {
   display: inline-flex;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 0.85rem;
+  /* padding: 8px 16px; */
+  /* border-radius: 50px; */
+  font-size: 1.5rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent-color);
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  box-shadow: var(--shadow-sm);
+  /* background: var(--card-bg); */
+  /* border: 1px solid var(--card-border); */
+  /* box-shadow: var(--shadow-sm); */
   margin-bottom: 14px;
+  align-items: center;
+  width: min(460px, 100%);
+  min-width: 0;
+  text-transform: none;
+  letter-spacing: 0.04em;
+  overflow: hidden;
+}
+
+.hero__badge-label {
+  margin-right: 0.45rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.hero__typed-role {
+  font-weight: 800;
+  white-space: nowrap;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.role-blue {
+  color: #2563eb;
+  text-shadow: 0 0 14px rgba(37, 99, 235, 0.18);
+}
+
+.role-cyan {
+  color: #0284c7;
+  text-shadow: 0 0 14px rgba(2, 132, 199, 0.18);
+}
+
+.role-indigo {
+  color: #4f46e5;
+  text-shadow: 0 0 14px rgba(79, 70, 229, 0.18);
+}
+
+.hero__typing-caret {
+  width: 2px;
+  height: 1.05em;
+  margin-left: 3px;
+  border-radius: 2px;
+  background: currentColor;
+  animation: typingCaret 0.8s steps(1) infinite;
+}
+
+@keyframes typingCaret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__typing-caret {
+    animation: none;
+  }
 }
 
 .hero__title {
@@ -83,8 +137,8 @@
 }
 
 .btn {
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s;
@@ -125,11 +179,11 @@
 }
 
 .pill {
-  padding: 6px 14px;
-  border-radius: 50px;
+  padding: 6px 10px;
+  border-radius: 20px;
   font-size: 0.9rem;
   color: var(--text-muted);
-  background: var(--card-bg);
+  /* background: var(--card-bg); */
   border: 1px solid var(--card-border);
   transition: all 0.2s;
 }
@@ -139,6 +193,32 @@
   color: var(--primary-color);
   transform: translateY(-2px);
 }
+.contact-icons {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.contact-icons a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(var(--icon-invert));
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.contact-icons a:hover img {
+    opacity: 1;
+    transform: translateY(-5px);
+    filter: invert(var(--icon-invert)) sepia(100%) saturate(300%) hue-rotate(180deg);
+    /* Gives a blue-ish tint on hover */
+}
+
+/* Adjust colors for specific brand colors on hover if preferred */
+.contact-icons a[title="LinkedIn"]:hover img {
+    filter: none;
+    /* Original colors if SVG has them, or keep custom */
+}
 
 .hero__media {
   display: flex;
@@ -147,7 +227,7 @@
 }
 
 .avatar {
-  width: min(360px, 80vw);
+  width: min(300px, 80vw);
   aspect-ratio: 1;
   border-radius: 30px;
   overflow: hidden;

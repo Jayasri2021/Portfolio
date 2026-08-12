@@ -4,37 +4,37 @@
   <div class="hero__container">
     <!-- Left: Text -->
     <div class="hero__content">
-      <p class="hero__badge">Software Engineer | Applied AI/ML | Data Engineering</p>
-
       <h1 class="hero__title">
         Jayasri <span class="hero__titleAccent">Suresh Vani</span>
       </h1>
-
-      <p class="hero__subtitle">
-        Purdue MS in Computer Science
+      <p class="hero__badge" aria-label="Software Engineer, Applied AI and Machine Learning, Data Engineering">
+        <span class="hero__badge-label">I build as a</span>
+        <span class="hero__typed-role" [ngClass]="roleColorClass">{{ displayedRole }}</span>
+        <span class="hero__typing-caret" aria-hidden="true"></span>
       </p>
-      <!-- <p class="hero__subtitle" style="font-size: 16px;">
 
-      </p> -->
 
       <p class="hero__desc" id="para">
-        I’m a Software Engineer working across data engineering, backend systems, and applied AI/ML. I build reliable data pipelines and scalable applications, then validate their outputs so dashboards, models, and AI features are accurate, traceable, and useful. My work includes SQL and Python ETL workflows, performance-optimized backend systems, LLM evaluation pipelines across 250+ medical-training datasets, RAG applications, forecasting systems, and full-stack product development. I’m seeking opportunities where strong software engineering, trusted data, and practical AI systems intersect.
+        I enjoy building reliable, data-driven systems across product layers. From scalable backend services and data pipelines to AI-powered features and modern web applications, I create practical solutions that turn complex data into useful, user-centered experiences.
       </p>
 
       <div class="hero__actions">
-        <button class="btn btn--primary" (click)="viewResume1()">Software Engineer Resume</button>
-        <button class="btn btn--primary" (click)="viewResume2()">AI/ML Engineer Resume</button>
-        <button class="btn btn--primary" (click)="viewLinkedIn()">View LinkedIn Profile</button>
+        <button class="btn btn--primary" (click)="viewResume1()">View Resume</button>
       </div>
 
-      <div class="hero__stack">
-        <span class="pill">Python </span>
-        <span class="pill">SQL</span>
-        <span class="pill">Data Pipeline</span>
-        <span class="pill">RAG</span>
-        <span class="pill">LangChain</span>
-        <span class="pill">APIs</span>
-        <span class="pill">AWS & GCP</span>
+      <div class="contact-icons">
+        <a href="mailto:jayasri030520@gmail.com" title="Email">
+          <img src="../../assets/contacts-logo/email-solid.svg" alt="Email" />
+        </a>
+        <a href="https://www.linkedin.com/in/jayasri-suresh-vani-897879296" target="_blank" title="LinkedIn">
+          <img src="../../assets/contacts-logo/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/Jayasri2021" target="_blank" title="GitHub">
+          <img src="../../assets/contacts-logo/github.svg" alt="GitHub" />
+        </a>
+        <a href="tel:+12604923581" title="Phone">
+          <img src="../../assets/contacts-logo/phone-bold.svg" alt="Phone" />
+        </a>
       </div>
     </div>
 
@@ -45,8 +45,8 @@
     </div>
   </div>
 </section>
-<app-journey id="journey"></app-journey>
 <app-projects id="projects"></app-projects>
+<app-journey id="journey"></app-journey>
 <app-skills id="skills"></app-skills>
 <app-resume id="experience"></app-resume>
 <app-certification id="certifications"></app-certification>

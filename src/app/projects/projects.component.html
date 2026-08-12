@@ -1,15 +1,15 @@
 <div class="projects-section">
-  <h2 class="section-title">Projects</h2>
+  <h2 class="section-title">Stuff I Built</h2>
 
   <div class="parent">
     <div class="projects-list">
-      <div class="project-card" *ngFor="let proj of projects; let i = index" [class.reverse]="i % 2 !== 0">
+      <article class="project-card" *ngFor="let proj of projects; let i = index">
         <!-- Project Visual -->
         <div class="project-visual">
           <div class="image-container">
             <img *ngIf="proj.image" [src]="proj.image" [alt]="proj.title" class="project-img" />
             <div class="image-overlay">
-              <a [href]="proj.link" target="_blank" class="overlay-link">
+              <a [href]="proj.link" target="_blank" rel="noopener noreferrer" class="overlay-link">
                 <span>View Repository</span>
                 <img src="../../assets/Link-Icon.svg" alt="Link" />
               </a>
@@ -26,15 +26,16 @@
             <h3 class="project-title">{{ proj.title }}</h3>
           </div>
 
-          <div class="project-details">
-            <div class="detail-group">
-              <!-- <h4 class="detail-label">Objective & Use Case</h4> -->
-              <p class="detail-text">{{ proj.useCase }}</p>
-            </div>
+          <ul class="project-points">
+            <li *ngFor="let point of proj.bullets">{{ point }}</li>
+          </ul>
+
+          <div class="project-tech" aria-label="Technologies used">
+            <span *ngFor="let tech of proj.techStack">{{ tech }}</span>
           </div>
 
         </div>
-      </div>
+      </article>
 
     </div>
 

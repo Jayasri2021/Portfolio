@@ -8,6 +8,7 @@ import { ThemeService } from '../theme.service';
 })
 export class HeaderComponent implements OnInit {
   activeSection: string = 'home';
+  scrollProgress = 0;
   isDark = false;
   isMenuOpen = false;
 
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
     this.themeService.theme$.subscribe(theme => {
       this.isDark = theme === 'dark';
     });
+    this.updateScrollState();
   }
 
   toggleTheme() {
@@ -29,20 +31,51 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const sections = ['home', 'projects', 'journey', 'skills', 'experience', 'certifications'];
-    const threshold = 120; // Increased threshold for earlier detection
+    this.updateScrollState();
+  }
 
-    for (const sectionId of sections) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        // If the top of the section is within the top portion of the viewport
-        if (rect.top <= threshold && rect.bottom > threshold) {
-          this.activeSection = sectionId;
-          break;
-        }
+  @HostListener('window:resize', [])
+  onWindowResize() {
+    this.updateScrollState();
+  }
+
+  private updateScrollState() {
+    const sections = ['home', 'journey', 'projects', 'skills', 'experience', 'certifications', 'contact'];
+    const threshold = 120;
+    const sectionElements = sections
+      .map(id => document.getElementById(id))
+      .filter((element): element is HTMLElement => element !== null);
+    const scrollPosition = window.scrollY + threshold;
+
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+      this.activeSection = 'contact';
+      this.scrollProgress = 100;
+      return;
+    }
+
+    let activeIndex = 0;
+    for (let index = 0; index < sectionElements.length; index++) {
+      if (scrollPosition >= sectionElements[index].offsetTop) {
+        activeIndex = index;
+        this.activeSection = sections[index];
       }
     }
+
+    const segmentCount = Math.max(sectionElements.length - 1, 1);
+    if (activeIndex >= sectionElements.length - 1) {
+      this.scrollProgress = 100;
+      return;
+    }
+
+    const sectionStart = sectionElements[activeIndex].offsetTop;
+    const sectionEnd = sectionElements[activeIndex + 1].offsetTop;
+    const sectionHeight = Math.max(sectionEnd - sectionStart, 1);
+    const localProgress = Math.min(
+      Math.max((scrollPosition - sectionStart) / sectionHeight, 0),
+      1
+    );
+
+    this.scrollProgress = ((activeIndex + localProgress) / segmentCount) * 100;
   }
 
   scrollToSection(sectionId: string) {

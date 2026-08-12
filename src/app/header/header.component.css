@@ -4,9 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: var(--nav-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--card-bg);
   border-bottom: 1px solid var(--card-border);
   transition: all 0.3s ease;
   overflow: visible;
@@ -18,6 +16,9 @@
   justify-content: space-between;
   height: 70px;
   width: 100%;
+  max-width: 1320px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .logo {
@@ -28,6 +29,9 @@
   color: var(--primary-color);
   transition: transform 0.2s;
   flex-shrink: 0;
+  background: none;
+  border: 0;
+  padding: 0;
 }
 
 .logo:hover {
@@ -36,37 +40,60 @@
 
 .nav-desktop {
   display: none;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  padding: 0.3rem;
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  background: var(--bg-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-progress {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.14), rgba(59, 130, 246, 0.3));
+  transition: width 0.18s ease-out;
+  pointer-events: none;
 }
 
 .nav-desktop a {
-  margin: 0 0.75rem;
+  margin: 0;
+  padding: 0.35rem 0.72rem;
   font-weight: 500;
   cursor: pointer;
   position: relative;
   font-size: 0.95rem;
   color: var(--text-color);
   white-space: nowrap;
-}
-
-.nav-desktop a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: var(--primary-color);
-  transition: width 0.3s;
-}
-
-.nav-desktop a:hover::after,
-.nav-desktop a.active::after {
-  width: 100%;
+  z-index: 1;
+  border-radius: 999px;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
 }
 
 .nav-desktop a:hover,
 .nav-desktop a.active {
   color: var(--primary-color);
+}
+
+.nav-desktop a.active {
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+  font-weight: 700;
+}
+
+.mobile-progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 3px;
+  width: 0;
+  background: var(--primary-color);
+  transition: width 0.18s ease-out;
 }
 
 .header-actions {
@@ -167,5 +194,12 @@
 
   .header-actions {
     gap: 0.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
