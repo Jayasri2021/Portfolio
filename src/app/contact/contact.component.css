@@ -1,155 +1,35 @@
-:host {
-    display: block;
-    padding: 28px 0 16px;
-    background-color: transparent;
-    color: var(--text-color);
-    font-family: var(--font-main);
-    position: relative;
-    border-top: 1px solid var(--card-border);
-    overflow: hidden;
-}
-
-/* Background Gradients */
-:host::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, var(--accent-color) 0%, transparent 50%);
-    opacity: 0.1;
-    z-index: 0;
-    pointer-events: none;
-}
-
+:host { display: block; color: var(--text-color); border-top: 1px solid var(--card-border); }
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 24px;
-    position: relative;
-    z-index: 1;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
+  width: min(1272px,100%); margin: 0 auto; padding: 52px 28px 34px;
 }
-
-.footer-left {
-    flex: 1;
-    min-width: 300px;
+.footer-left { min-width: 0; }
+.section-kicker {
+  margin: 0 0 9px; color: var(--accent-color); font-family: var(--font-mono);
+  font-size: .65rem; font-weight: 750; letter-spacing: .2em; text-transform: uppercase;
 }
-
 .footer-heading {
-    font-size: 2.1rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
+  margin: 0 0 8px; color: var(--text-color); font-family: var(--font-display);
+  font-size: clamp(1.8rem,3vw,2.55rem); font-weight: 400; line-height: 1.05; letter-spacing: -.035em;
 }
-
-.footer-subtext {
-    font-size: var(--description-font-size);
-    line-height: var(--description-line-height);
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-    /* Reduced marginBottom */
-    max-width: 400px;
-}
-
-.copyright {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.footer-right {
-    display: flex;
-    /* gap: 80px; */
-}
-
-.footer-column {
-    display: flex;
-    flex-direction: column;
-    /* gap: 15px; */
-}
-
+.footer-subtext { max-width: 480px; margin: 0 0 19px; color: var(--text-muted); font-size: .88rem; line-height: 1.65; }
+.copyright { margin: 0; color: #6f687e; font-family: var(--font-mono); font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; }
+.footer-right { flex: 0 0 auto; }
+.footer-column { display: flex; flex-direction: column; align-items: flex-end; }
 .footer-column h3 {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--text-color);
-    letter-spacing: 0.05em;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+  margin: 0 0 12px; color: var(--accent-color); font-family: var(--font-mono);
+  font-size: .65rem; font-weight: 750; letter-spacing: .2em; text-transform: uppercase;
 }
-
-.footer-column a {
-    cursor: pointer;
-    transition: all 0.2s;
+.contact-icons { display: flex; align-items: center; gap: 9px; }
+.contact-icons a {
+  display: grid; width: 37px; height: 37px; place-items: center;
+  border: 1px solid var(--card-border); border-radius: 50%; transition: transform 180ms ease,border-color 180ms ease,background-color 180ms ease;
 }
-
-.contact-icons {
-    display: flex;
-    gap: 14px;
-    align-items: center;
+.contact-icons a:hover { transform: translateY(-2px); border-color: var(--primary-color); background: rgba(139,92,246,.09); }
+.contact-icons img { width: 17px; height: 17px; filter: invert(1); opacity: .72; transition: opacity 180ms ease; }
+.contact-icons a:hover img { opacity: 1; }
+@media (max-width: 650px) {
+  .footer-container { align-items: flex-start; flex-direction: column; padding: 44px 18px 28px; }
+  .footer-column { align-items: flex-start; }
 }
-
-.contact-icons a img {
-    width: 24px;
-    height: 24px;
-    filter: invert(var(--icon-invert));
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-
-.contact-icons a:hover img {
-    opacity: 1;
-    transform: translateY(-5px);
-    filter: invert(var(--icon-invert)) sepia(100%) saturate(300%) hue-rotate(180deg);
-    /* Gives a blue-ish tint on hover */
-}
-
-/* Adjust colors for specific brand colors on hover if preferred */
-.contact-icons a[title="LinkedIn"]:hover img {
-    filter: none;
-    /* Original colors if SVG has them, or keep custom */
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-left {
-        min-width: 100%;
-    }
-
-    .footer-heading {
-        font-size: 1.8rem;
-    }
-
-    .footer-right {
-        width: 100%;
-        justify-content: flex-start;
-        gap: 40px;
-    }
-
-    .footer-subtext {
-        margin-bottom: 1rem;
-    }
-
-    .contact-icons {
-        justify-content: flex-start;
-        margin-top: 4px;
-    }
-}
-
-@media (max-width: 320px) {
-    .footer-container {
-        padding: 0 10px;
-    }
-
-    .footer-heading {
-        font-size: 1.5rem;
-    }
-}
+@media (prefers-reduced-motion: reduce) { .contact-icons a,.contact-icons img { transition: none; } }

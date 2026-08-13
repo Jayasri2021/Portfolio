@@ -1,55 +1,53 @@
 /* Global Styles & Theme Variables */
 :root {
-  --bg-color: #f8f9fa;
-  --text-color: #0f172a;
-  --text-muted: #475569;
-  --primary-color: #1e40af;
-  /* Professional Navy Blue */
+  --bg-color: #090713;
+  --text-color: #eeeafd;
+  --text-muted: #9993aa;
+  --primary-color: #a78bfa;
   --secondary-color: #64748b;
-  --accent-color: #334155;
-  /* Slate */
-  --card-bg: #ffffff;
-  --card-border: #e2e8f0;
-  --nav-bg: rgba(255, 255, 255, 0.9);
-  --timeline-line: #cbd5e1;
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --font-main: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --accent-color: #67e8f9;
+  --card-bg: rgba(17, 14, 32, 0.94);
+  --card-border: #2c2642;
+  --nav-bg: #090713;
+  --timeline-line: #302948;
+  --shadow-sm: 0 8px 24px rgba(30, 41, 59, 0.06);
+  --shadow-md: 0 16px 36px rgba(30, 41, 59, 0.11);
+  --font-main: 'Segoe UI Variable', 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --description-font-size: 0.96rem;
   --description-line-height: 1.65;
-  --icon-invert: 0;
+  --icon-invert: 1;
 
   /* Motif Background Variables - Light Theme */
-  --motif-base: #f1f5f9;
+  --motif-base: #090713;
   --motif-opacity: 1;
-  --motif-color-1: #1e40af;
-  --motif-color-2: #3b82f6;
-  --motif-glow-opacity: 0.05;
+  --motif-color-1: #7c3aed;
+  --motif-color-2: #0891b2;
+  --motif-glow-opacity: 0.08;
 }
 
 [data-theme="dark"] {
-  --bg-color: #0f172a;
-  --text-color: #f8fafc;
-  --text-muted: #94a3b8;
-  --primary-color: #60a5fa;
-  /* Professional Steel Blue */
+  --bg-color: #090713;
+  --text-color: #eeeafd;
+  --text-muted: #9993aa;
+  --primary-color: #a78bfa;
   --secondary-color: #64748b;
-  --accent-color: #94a3b8;
-  --card-bg: #1e293b;
-  --card-border: #334155;
-  --nav-bg: rgba(15, 23, 42, 0.8);
-  --timeline-line: #334155;
+  --accent-color: #67e8f9;
+  --card-bg: rgba(17, 14, 32, 0.94);
+  --card-border: #2c2642;
+  --nav-bg: #090713;
+  --timeline-line: #302948;
   --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
   --icon-invert: 1;
 
   /* Motif Background Variables - Dark Theme */
-  --motif-base: #020617;
+  --motif-base: #090713;
   --motif-opacity: 1;
-  --motif-color-1: #1e40af;
-  --motif-color-2: #3b82f6;
-  --motif-glow-opacity: 0.08;
+  --motif-color-1: #7c3aed;
+  --motif-color-2: #0891b2;
+  --motif-glow-opacity: 0.1;
 }
 
 * {
@@ -63,7 +61,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -79,7 +77,7 @@ body {
 }
 
 body {
-  background-color: transparent;
+  background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
   font-size: 16px;
@@ -125,10 +123,22 @@ body {
   height: 100%;
   opacity: var(--motif-opacity);
   pointer-events: none;
+  background-image:
+    linear-gradient(rgba(100, 116, 139, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(100, 116, 139, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
 }
 
 [data-theme="dark"] .motif-bg::before {
-  background-image: none;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.045) 1px, transparent 1px);
 }
 
 html {
@@ -181,17 +191,26 @@ a:hover {
 .section-title {
   text-align: center;
   font-size: 2.15rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.25rem;
+  color: var(--text-color);
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin: 0.45rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
 .container {
@@ -204,7 +223,7 @@ a:hover {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
@@ -215,7 +234,7 @@ a:hover {
 .btn-primary {
   /* Renamed logic: Primary class but styled as requested (ghost-like blue on hover) */
   background-color: transparent;
-  border: 1px solid var(--primary-color);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 65%, transparent);
   color: var(--primary-color);
 }
 

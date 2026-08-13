@@ -1,49 +1,43 @@
-<div class="projects-section">
-  <h2 class="section-title">Stuff I Built</h2>
+<section class="projects-section" aria-labelledby="projects-title" #scrollShell [style.height.px]="shellHeight">
+  <div class="projects-stage">
+    <header class="projects-heading">
+      <div>
+        <p class="section-kicker">III · Selected Work</p>
+        <h2 id="projects-title">Projects.</h2>
+      </div>
+      <!-- <p class="section-intro">Software and AI systems built around real problems, measurable outcomes, and reliable engineering.</p> -->
+    </header>
 
-  <div class="parent">
-    <div class="projects-list">
-      <article class="project-card" *ngFor="let proj of projects; let i = index">
-        <!-- Project Visual -->
-        <div class="project-visual">
-          <div class="image-container">
-            <img *ngIf="proj.image" [src]="proj.image" [alt]="proj.title" class="project-img" />
-            <div class="image-overlay">
-              <a [href]="proj.link" target="_blank" rel="noopener noreferrer" class="overlay-link">
-                <span>View Repository</span>
-                <img src="../../assets/Link-Icon.svg" alt="Link" />
-              </a>
+    <div class="rail-viewport" #railViewport>
+      <div class="projects-rail" #projectsRail aria-label="Project case studies"
+        [style.transform]="'translate3d(' + (-translateX) + 'px, 0, 0)'">
+        <article class="project-card" *ngFor="let proj of projects; let i = index">
+          <a class="project-image" [href]="proj.link" target="_blank" rel="noopener noreferrer"
+            [attr.aria-label]="'View ' + proj.title + ' repository'">
+            <img *ngIf="proj.image" [src]="proj.image" [alt]="proj.title + ' preview'" />
+            <span class="view-label">View case study ↗</span>
+          </a>
+          <div class="project-content">
+            <div class="project-heading">
+              <h3>{{ proj.title }}</h3>
+            </div>
+            <p>{{ proj.bullets[0] }}</p>
+            <div class="project-footer">
+              <div class="project-tech" aria-label="Technologies used">
+                <span *ngFor="let tech of proj.techStack.slice(0, 4)">{{ tech }}</span>
+              </div>
+              <a [href]="proj.link" target="_blank" rel="noopener noreferrer" aria-label="Open repository">↗</a>
             </div>
           </div>
-        </div>
-
-        <!-- Project Info -->
-        <div class="project-info">
-          <div class="project-header">
-            <div class="project-meta">
-              <span class="project-num">0{{ i + 1 }}</span>
-            </div>
-            <h3 class="project-title">{{ proj.title }}</h3>
-          </div>
-
-          <ul class="project-points">
-            <li *ngFor="let point of proj.bullets">{{ point }}</li>
-          </ul>
-
-          <div class="project-tech" aria-label="Technologies used">
-            <span *ngFor="let tech of proj.techStack">{{ tech }}</span>
-          </div>
-
-        </div>
-      </article>
-
+        </article>
+      </div>
     </div>
 
-    <!-- More Projects Button -->
-    <div id="other-proj">
-      <button (click)="viewOtherProj()" class="btn btn-primary">
-        See All Git Projects <img src="../../assets/Link-Icon.svg" alt="Link" />
+    <div class="rail-caption" aria-hidden="true"><span>Scroll to explore</span><i></i></div>
+    <div class="all-projects">
+      <button (click)="viewOtherProj()" class="explore-button">
+        <span>Explore all projects</span><i aria-hidden="true">↗</i>
       </button>
     </div>
   </div>
-</div>
+</section>

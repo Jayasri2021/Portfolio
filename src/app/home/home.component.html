@@ -1,53 +1,42 @@
 <app-header></app-header>
 
-<section id="home" class="hero">
+<main id="home" class="hero">
   <div class="hero__container">
-    <!-- Left: Text -->
     <div class="hero__content">
-      <h1 class="hero__title">
-        Jayasri <span class="hero__titleAccent">Suresh Vani</span>
-      </h1>
-      <p class="hero__badge" aria-label="Software Engineer, Applied AI and Machine Learning, Data Engineering">
-        <span class="hero__badge-label">I build as a</span>
-        <span class="hero__typed-role" [ngClass]="roleColorClass">{{ displayedRole }}</span>
-        <span class="hero__typing-caret" aria-hidden="true"></span>
+      <p class="hero__eyebrow">Jayasri Suresh Vani · Portfolio</p>
+      <h1 class="hero__title">Building reliable<br><span>AI-driven systems</span><br>from data to product.</h1>
+      <p class="hero__role" aria-label="Software Engineer, Applied AI and Machine Learning, Data Engineering">
+        <span>Currently creating as </span>
+        <strong [ngClass]="roleColorClass">{{ displayedRole }}</strong>
+        <i aria-hidden="true"></i>
       </p>
-
-
-      <p class="hero__desc" id="para">
-        I enjoy building reliable, data-driven systems across product layers. From scalable backend services and data pipelines to AI-powered features and modern web applications, I create practical solutions that turn complex data into useful, user-centered experiences.
-      </p>
-
+      <!-- <p class="hero__desc">I design production-ready software, data pipelines, and intelligent experiences with clarity, practical impact, and reliable engineering.</p> -->
       <div class="hero__actions">
-        <button class="btn btn--primary" (click)="viewResume1()">View Resume</button>
-      </div>
-
-      <div class="contact-icons">
-        <a href="mailto:jayasri030520@gmail.com" title="Email">
-          <img src="../../assets/contacts-logo/email-solid.svg" alt="Email" />
-        </a>
-        <a href="https://www.linkedin.com/in/jayasri-suresh-vani-897879296" target="_blank" title="LinkedIn">
-          <img src="../../assets/contacts-logo/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/Jayasri2021" target="_blank" title="GitHub">
-          <img src="../../assets/contacts-logo/github.svg" alt="GitHub" />
-        </a>
-        <a href="tel:+12604923581" title="Phone">
-          <img src="../../assets/contacts-logo/phone-bold.svg" alt="Phone" />
+        <button class="hero-btn" (click)="viewResume1()">
+          <span>View my resume</span><i aria-hidden="true">↗</i>
+        </button>
+        <a class="hero-btn" href="#projects">
+          <span>Explore work</span><i aria-hidden="true">↓</i>
         </a>
       </div>
     </div>
 
     <div class="hero__media">
-      <div class="avatar" #avatar oncontextmenu="return false;">
-        <img src="../../assets/profile-pic.jpeg" alt="Profile" draggable="false" />
+      <div class="portrait-frame" #avatar oncontextmenu="return false;">
+        <!-- <span class="frame-label">Open to opportunities</span> -->
+        <div class="avatar">
+          <img src="../../assets/profile-pic.jpeg" alt="Jayasri Suresh Vani" draggable="false" />
+        </div>
+        <!-- <span class="frame-index">01 / 07</span> -->
       </div>
     </div>
   </div>
-</section>
-<app-projects id="projects"></app-projects>
+</main>
 <app-journey id="journey"></app-journey>
+<app-projects id="projects"></app-projects>
 <app-skills id="skills"></app-skills>
-<app-resume id="experience"></app-resume>
+<!-- Certifications are temporarily hidden. Keep the component available for future use.
 <app-certification id="certifications"></app-certification>
+-->
+<app-resume id="experience"></app-resume>
 <app-contact id="contact"></app-contact>

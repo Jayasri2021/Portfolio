@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 interface TimelineItem {
   title: string;
   subtitle: string;
+  // description: string;
   duration?: string;
   // description: string;
   icon?: string; // path to image or icon class
@@ -21,6 +22,7 @@ export class ResumeComponent {
     {
       title: 'Conference Presentation',
       subtitle: 'Recognition of Impediments using IoT and ML for Purblind People',
+      // description: 'An assistive system using IoT sensing and machine learning to recognize environmental obstacles for people with visual impairments.',
       // description: 'Presented work on Computational Intelligence and Communication Networks - eICCICN 2023 on Machine Learning and IoT to identify and address obstacles faced by visually impaired individuals.',
       category: 'certification',
       icon: '../../assets/resume-papers/walking-conf-certi.jpg',
@@ -30,6 +32,7 @@ export class ResumeComponent {
     {
       title: 'IEEE Xplore - HelmetGuard',
       subtitle: 'HelmetGuard: IoT-Enabled Smart Helmet for Enhanced Safety',
+      // description: 'A smart safety helmet combining connected sensors and real-time monitoring for higher-risk working environments.',
       // description: 'Developed a smart helmet using IoT to elevate safety standards in high-risk environments. Integrated algorithms for real-time safety monitoring.',
       category: 'certification',
       icon: '../../assets/resume-papers/helmet-conf-certi.png',
@@ -39,6 +42,7 @@ export class ResumeComponent {
     {
       title: 'Natural Language Processing',
       subtitle: 'NEWS Aggregation System Leveraging NER and Classifiers: Summarization',
+      // description: 'A geography-aware NLP pipeline that classifies news by region and generates focused, location-specific summaries.',
       // description: 'A geography-aware news aggregation system that classifies news articles by geographic regions and generates region-specific summaries.',
       category: 'certification',
       icon: '../../assets/resume-papers/NLP.jpg',
@@ -48,6 +52,7 @@ export class ResumeComponent {
     {
       title: 'Ethical Artificial Intelligence',
       subtitle: 'Context-Aware Bias Detection and Controlled Text Rewriting for Fairer News Media',
+      // description: 'A transformer-based NLP system for detecting contextual and political bias and producing more balanced text alternatives.',
       // description: 'NLP system utilizing Transformer models to identify political and contextual biases in news media.',
       category: 'experience',
       icon: '../../assets/resume-papers/eai.jpg',

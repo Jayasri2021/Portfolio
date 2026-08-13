@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
   }
 
   private updateScrollState() {
-    const sections = ['home', 'journey', 'projects', 'skills', 'experience', 'certifications', 'contact'];
+    const sections = ['home', 'journey', 'projects', 'skills', 'experience', 'contact'];
     const threshold = 120;
     const sectionElements = sections
       .map(id => document.getElementById(id))

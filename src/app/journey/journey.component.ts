@@ -19,23 +19,23 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
       title: 'Generative AI Specialist',
       subtitle: 'CDF - Community Dreams Foundation',
       duration: 'Jul 2026 - Present',
-      description: 'Contribute to BetterSnapAI’s full-stack product development by building admin-dashboard workflows and AI image-generation features using Azure, Python, Supabase, and LoRA models, with a focus on operational analytics and GPU-cost optimization.',
+      description: 'Build AI-powered full-stack features, admin-dashboard workflows, and cost-efficient image-generation systems using Azure, Python, Supabase, and LoRA models.',
       category: 'experience'
     },
     {
-      title: 'AI/ML Research & Developer Engineer',
+      title: 'Applied AI/ML Engineer',
       subtitle: 'Raven AI',
       duration: 'Jul 2025 - May 2026 (11 Months)',
       description: 'Built Python-based evaluation pipelines that transformed 250+ unstructured medical-training dialogues into structured behavioral scores, automating LLM benchmarking across GPT-4o, Qwen3, and Llama using MAE, MSE, and R² to support model-selection and prompt-optimization decisions.',
       category: 'experience'
     },
-    {
-      title: 'Technical Support Engineer -> Lead Technical Support Engineer',
-      subtitle: 'Purdue University',
-      duration: 'Dec 2024 - Apr 2026 (1 Year 4 Months)',
-      description: ' Supported 500+ daily users by troubleshooting campus IT systems, standardizing 100+ workstations, and documenting repeatable technical fixes.',
-      category: 'experience'
-    },
+    // {
+    //   title: 'Technical Support Engineer -> Lead Technical Support Engineer',
+    //   subtitle: 'Purdue University',
+    //   duration: 'Dec 2024 - Apr 2026 (1 Year 4 Months)',
+    //   description: ' Supported 500+ daily users by troubleshooting campus IT systems, standardizing 100+ workstations, and documenting repeatable technical fixes.',
+    //   category: 'experience'
+    // },
     {
       title: 'M.S., Computer Science',
       subtitle: 'Purdue University',
@@ -144,33 +144,28 @@ export class JourneyComponent implements OnInit, AfterViewInit, OnDestroy {
   getWorkBullets(title: string): string[] {
     const bullets: Record<string, string[]> = {
       'Generative AI Specialist': [
-        'Build BetterSnapAI admin-dashboard workflows.',
-        'Develop AI image-generation features with Azure, Python, Supabase, and LoRA.',
-        'Improve operational analytics and GPU-cost efficiency.'
+        'Building BetterSnapAI admin dashboard workflows',
+        'Optimizing Azure GPU image-generation operations'
       ],
-      'AI/ML Research & Developer Engineer': [
-        'Converted 250+ medical-training dialogues into behavioral scores.',
-        'Benchmarked GPT-4o, Qwen3, and Llama using MAE, MSE, and R².',
-        'Supported model selection and prompt optimization.'
+      'Applied AI/ML Engineer': [
+        'Built LLM evaluation data pipelines',
+        'Benchmarked models across 250+ datasets'
       ],
-      'Technical Support Engineer -> Lead Technical Support Engineer': [
-        'Supported 500+ daily users across campus IT systems.',
-        'Standardized more than 100 workstations.',
-        'Documented repeatable troubleshooting procedures.'
-      ],
+      // 'Technical Support Engineer -> Lead Technical Support Engineer': [
+      //   'Supported 500+ daily campus users',
+      //   'Standardized systems and troubleshooting workflows'
+      // ],
       'Software Engineer': [
-        'Built a biometric authentication system with Java Swing and MySQL.',
-        'Integrated the MFS100 fingerprint SDK using MVC architecture.',
-        'Implemented encrypted credentials and role-based access.'
+        'Built biometric authentication system',
+        'Implemented secure MySQL access workflows'
       ],
       'Data Analyst -> Machine Learning Engineer': [
         'Cleaned and analyzed more than 10,000 records.',
-        'Reduced SQL reporting time by 45% and built dashboards.',
-        'Developed ML models with 85%+ predictive accuracy.'
+        'Optimized SQL & trained ML models for predictive analytics.'
       ],
       'Applied Programming Facilitator': [
-        'Taught Python, algorithms, debugging, and MySQL to 100+ learners.',
-        'Led hands-on exercises and project-based mentoring.'
+        'Taught Python, algorithms, MySQL fundamentals',
+        'Mentored hands-on coding projects'
       ]
     };
 

@@ -20,7 +20,7 @@
 .cert-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 16px;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
 .cert-card:hover {
     border-color: var(--primary-color);
     box-shadow: var(--shadow-md);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
 }
 
 .cert-info h3 {
@@ -57,7 +57,7 @@
     background: transparent;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
-    border-radius: 6px;
+    border-radius: 999px;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 600;

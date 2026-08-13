@@ -1,35 +1,28 @@
-<section class="experience-section">
-  <div class="container">
-    <h2 class="section-title">Academic Research & Publications</h2>
+<section class="research-section" aria-labelledby="research-title">
+  <div class="research-container">
+    <header class="research-heading">
+      <p class="section-kicker">V · Research archive</p>
+      <h2 id="research-title">Academic Research & Publications.</h2>
+    </header>
 
-    <div class="experience-grid">
-      <div class="experience-card" *ngFor="let item of timelineData">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="card-img-wrapper" *ngIf="item.icon">
-              <!-- Using object-fit contain/cover depending on image type -->
-              <img [src]="item.icon" alt="Experience Image">
-            </div>
-          </div>
-          <div class="card-back">
-            <div class="card-date" *ngIf="item.duration">{{ item.duration }}</div>
-            <h3 class="card-title">{{ item.title }}</h3>
-            <h4 class="card-subtitle">{{ item.subtitle }}</h4>
-            <!-- <p class="card-desc">{{ item.description }}</p> -->
-            <div class="card-footer" *ngIf="item.link">
-              <a [href]="item.link" target="_blank" class="publication-link">
-                {{ item.linkLabel || 'View Document' }}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
+    <div class="research-grid">
+      <article class="research-card" *ngFor="let item of timelineData">
+        <a class="research-cover" *ngIf="item.link" [href]="item.link" target="_blank" rel="noopener noreferrer"
+          [attr.aria-label]="(item.linkLabel || 'View document') + ': ' + item.subtitle">
+          <img *ngIf="item.icon" [src]="item.icon" [alt]="item.subtitle + ' preview'">
+          <span class="cover-shade" aria-hidden="true"></span>
+          <span class="cover-action">Open research ↗</span>
+        </a>
+        <div class="research-content">
+          <p class="research-type">{{ item.title }}</p>
+          <h3>{{ item.subtitle }}</h3>
+          <div class="research-footer">
+            <a *ngIf="item.link" [href]="item.link" target="_blank" rel="noopener noreferrer">
+              {{ item.linkLabel || 'View document' }} <i aria-hidden="true">↗</i>
+            </a>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>

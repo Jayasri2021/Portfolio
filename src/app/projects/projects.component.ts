@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnDestroy, ViewChild } from '@angular/core';
 
 interface Project {
   title: string;
@@ -14,7 +14,15 @@ interface Project {
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit, OnDestroy {
+  @ViewChild('scrollShell') scrollShell!: ElementRef<HTMLElement>;
+  @ViewChild('railViewport') railViewport!: ElementRef<HTMLElement>;
+  @ViewChild('projectsRail') projectsRail!: ElementRef<HTMLElement>;
+
+  translateX = 0;
+  shellHeight: number | null = null;
+  private scrollDistance = 0;
+  private resizeObserver?: ResizeObserver;
 
   projects: Project[] = [
     {
@@ -102,6 +110,50 @@ export class ProjectsComponent {
       link: 'https://github.com/Jayasri2021/Epileptic-Seizure-Classification'
     }
   ];
+
+  ngAfterViewInit(): void {
+    this.resizeObserver = new ResizeObserver(() => this.measureRail());
+    this.resizeObserver.observe(this.projectsRail.nativeElement);
+    this.resizeObserver.observe(this.railViewport.nativeElement);
+    requestAnimationFrame(() => this.measureRail());
+  }
+
+  ngOnDestroy(): void {
+    this.resizeObserver?.disconnect();
+  }
+
+  @HostListener('window:scroll')
+  onWindowScroll(): void {
+    this.updateHorizontalPosition();
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.measureRail();
+  }
+
+  private measureRail(): void {
+    if (window.innerWidth < 768) {
+      this.shellHeight = null;
+      this.scrollDistance = 0;
+      this.translateX = 0;
+      return;
+    }
+
+    const railWidth = this.projectsRail.nativeElement.scrollWidth;
+    const viewportWidth = this.railViewport.nativeElement.clientWidth;
+    this.scrollDistance = Math.max(railWidth - viewportWidth, 0);
+    const stageHeight = Math.max(window.innerHeight - 76, 480);
+    this.shellHeight = stageHeight + this.scrollDistance;
+    requestAnimationFrame(() => this.updateHorizontalPosition());
+  }
+
+  private updateHorizontalPosition(): void {
+    if (!this.shellHeight || !this.scrollDistance) return;
+    const shellTop = this.scrollShell.nativeElement.getBoundingClientRect().top;
+    const progress = Math.min(Math.max((76 - shellTop) / this.scrollDistance, 0), 1);
+    this.translateX = progress * this.scrollDistance;
+  }
 
   viewOtherProj() {
     const url = 'https://github.com/Jayasri2021?tab=repositories';
