@@ -60,9 +60,17 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.typingTimer = setTimeout(() => this.runTypingAnimation(), this.isDeleting ? 45 : 85);
   }
 
-  viewResume1() {
-    const resumeUrl = '../../assets/resume-papers/Jayasri_Suresh_Vani_Resume.pdf';
-    window.open(resumeUrl, '_blank');
+  downloadResume(): void {
+    const link = document.createElement('a');
+    link.href = 'assets/resume-papers/Jayasri_Suresh_Vani_Resume.pdf';
+    link.download = 'Jayasri_Suresh_Vani_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
+  viewResume1(): void {
+    this.downloadResume();
   }
 
   viewLinkedIn() {

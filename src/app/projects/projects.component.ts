@@ -26,24 +26,30 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
 
   projects: Project[] = [
     {
+      title: 'PharmaTrace-DW',
+      useCase: 'Designed a data warehouse to track pharmaceutical export, batch quality, and cold-chain logistics data.',
+      bullets: [
+        'Designed a data warehouse to track pharmaceutical export, batch quality, and cold-chain logistics data.'
+      ],
+      techStack: ['Python', 'PySpark', 'Data Warehousing', 'ETL', 'Cloud Storage'],
+      image: '../../assets/pharmatrace.png',
+      link: 'https://github.com/Jayasri2021/PharmaTrace-DW'
+    },
+    {
       title: 'Time-Series Forecasting & Backtesting Pipeline',
       useCase: 'Designed an end-to-end forecasting pipeline using historical fuel pricing data, engineering lag features, rolling-window statistics, trend features, and seasonality features to improve forecast reliability. Evaluated baseline models and XGBoost using MAE, RMSE, and SMAPE across backtesting windows.',
       bullets: [
-        'Engineered lag, rolling-window, trend, and seasonality features.',
-        'Evaluated baseline models and XGBoost through rolling backtests.',
-        'Measured reliability using MAE, RMSE, and SMAPE.'
+        'An end-to-end forecasting pipeline using historical fuel pricing data to improve forecast reliability.'
       ],
       techStack: ['Python', 'Pandas', 'XGBoost', 'Time Series'],
-      image: '../../assets/lumendocs-pic.png',
+      image: '../../assets/forecasting.png',
       link: 'https://github.com/Jayasri2021/Forecasting_Backtesting_Pipeline'
     },
     {
-      title: 'LumenDocs - RAG Document Assistant',
+      title: 'LumenDoc-QA',
       useCase: 'Built a Retrieval-Augmented Generation (RAG) pipeline using LangChain, FAISS, and FastAPI to query large PDFs and web documents. Implemented document ingestion, semantic chunking, embedding generation, vector search, retrieval logic, and grounded answer generation. Tested retrieval workflows across 50+ sample document queries to evaluate answer relevance and source grounding.',
       bullets: [
-        'Built document ingestion, semantic chunking, and embedding workflows.',
-        'Implemented vector retrieval and grounded answer generation.',
-        'Tested relevance and grounding across 50+ document queries.'
+        'A RAG pipeline to query large PDFs and web documents for grounded answers'
       ],
       techStack: ['Python', 'LangChain', 'FAISS', 'FastAPI', 'RAG'],
       image: '../../assets/lumendocs-pic.png',
@@ -53,45 +59,47 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
       title: 'Gesture2Globe',
       useCase: 'Built a real-time computer vision system for ASL recognition and translation using MediaPipe hand-keypoint extraction and temporal modeling. Reduced inference latency by 50% through model and pipeline optimization, with backend inference workflows deployed via containerized architecture on Google Cloud Run.',
       bullets: [
-        'Built real-time ASL recognition using MediaPipe keypoints.',
-        'Reduced inference latency by 50% through pipeline optimization.',
-        'Deployed containerized inference workflows on Google Cloud Run.'
+        'A real-time computer vision system for ASL recognition and translation'
       ],
       techStack: ['Python', 'OpenCV', 'MediaPipe', 'FastAPI', 'GCP'],
-      image: '../../assets/gesture2globe-pic2.jpg',
+      image: '../../assets/gesture2globe-pic.jpg',
       link: 'https://github.com/Jayasri2021/Gesture2Globe-ASL-Sign-Detection'
     },
     {
       title: 'MoodTunes',
       useCase: 'Built a mood-based music recommendation system using NLP-based emotion classification and Spotify playlist API integration. Classified free-text user input into multiple emotion categories and generated context-aware playlist recommendations, tested across 50+ sample user inputs.',
       bullets: [
-        'Classified free-text input into emotion categories.',
-        'Generated context-aware playlists through Spotify integration.',
-        'Tested recommendations across 50+ sample inputs.'
+        'A mood-based music recommendation system that classifies text into emotions and generates playlist recommendations'
       ],
       techStack: ['React', 'Node.js', 'NLP', 'PostgreSQL'],
       image: '../../assets/moodtunes-pic.jpg',
       link: 'https://github.com/Jayasri2021/Music-Playlist-Generation-model'
     },
     {
-      title: 'Adaptive Learning Management System',
+      title: 'NexusLMS',
       useCase: 'Built a role-based LMS supporting 500+ users with authentication, quiz workflows, reporting, and analytics features. Optimized backend query retrieval time by 50% through database query and dashboard workflow improvements. Designed PostgreSQL-backed workflows to track users, courses, quiz outcomes, and performance metrics.',
       bullets: [
-        'Built role-based learning workflows for 500+ users.',
-        'Added authentication, quizzes, reporting, and analytics.',
-        'Reduced backend query retrieval time by 50%.'
+        'A learning management system that supports 500+ users with quiz workflows, reporting, and analytics features'
       ],
       techStack: ['React', 'Next.js', 'PostgreSQL', 'REST APIs'],
       image: '../../assets/adaptive-learning-pic2.jpg',
       link: 'https://github.com/Jayasri2021/lms_project'
     },
     {
-      title: 'CampusCrew - Centralized Service Platform',
+      title: 'AuctionEase',
+      useCase: 'Developed a real-time bidding platform using Spring Boot, Java, and MVC architecture with React frontend and designed RBAC and secure REST APIs to manage listings, bids, and transactions across user roles.',
+      bullets: [
+        'A real-time bidding platform that manages listings, bids, and transactions across user roles'
+      ],
+      techStack: ['Java', 'React', 'Spring Boot', 'MySQL', 'REST APIs', 'Maven', 'HTTPX'],
+      image: '../../assets/auctionease.jpg',
+      link: 'https://github.com/Jayasri2021/Auction-Ease-Project'
+    },
+    {
+      title: 'CampusCrew',
       useCase: 'Built a full-stack campus services platform using React, Flask, and Supabase, implementing service listings, discovery, and tutoring/event workflows with role-based access. Tested core workflows across 50+ sample users, listings, and service requests during development.',
       bullets: [
-        'Built service discovery, tutoring, and event workflows.',
-        'Implemented role-based access for campus users.',
-        'Tested core flows across 50+ sample requests.'
+        'A full-stack campus services platform implementing service listings, discovery, and tutoring/event workflows'
       ],
       techStack: ['React', 'Flask', 'Supabase', 'Cypress', 'PyTest'],
       image: '../../assets/campuscrew-pic.gif',
@@ -101,9 +109,7 @@ export class ProjectsComponent implements AfterViewInit, OnDestroy {
       title: 'Epileptic Seizure Classification',
       useCase: 'Built a CNN/LSTM-based seizure classification model using EEG signal data and 2D signal transformations, achieving 92% classification accuracy. Applied wavelet transform, t-SNE visualization, and TensorFlow/Keras modeling, with evaluation workflows designed for biomedical signal reliability.',
       bullets: [
-        'Built CNN/LSTM models for transformed EEG signals.',
-        'Applied wavelet transforms and t-SNE visualization.',
-        'Achieved 92% seizure-classification accuracy.'
+        'Seizure classification model using EEG signal data and 2D signal transformation'
       ],
       techStack: ['Python', 'TensorFlow', 'CNN', 'LSTM', 'EEG'],
       image: '../../assets/seizure1-pic.jpg',
